@@ -16,7 +16,7 @@ public class Weapon : MonoBehaviour
     int lightComboCount;
     [SerializeField]
     int heavyComboCount;
-    
+
     [SerializeField] private float comboTimer;
     [SerializeField] private float comboGraceTime;
     

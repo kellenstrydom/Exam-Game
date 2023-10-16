@@ -173,6 +173,7 @@ public class PlayerControls : MonoBehaviour
     {
         currentState = ActionState.dashing;
         OrientateTowardsMouse();
+        rb.velocity = Vector3.zero;
         rb.AddForce(orientation.forward * (dashForce),ForceMode.Impulse);
         dashCount++;
         tr.emitting = true;
