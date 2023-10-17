@@ -67,6 +67,7 @@ public class ElectricArc : MonoBehaviour
         else
         {
             Debug.Log("Arc Finished");
+            _electricity.DeleteElectricity();
         }
     }
 

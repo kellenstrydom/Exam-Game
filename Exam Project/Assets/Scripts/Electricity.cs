@@ -18,7 +18,7 @@ public class Electricity : MonoBehaviour
 
     private void Start()
     {
-        StartElectricArc(testStart);
+        //StartElectricArc(testStart);
     }
 
     public void StartElectricArc(Transform startTransform)
@@ -59,5 +59,10 @@ public class Electricity : MonoBehaviour
         currentArc.nexArc = new ElectricArc(this,endTransform);
         Destroy(currentArc.arcObj,arcDuration);
         Debug.Log("coroutine end");
+    }
+
+    public void DeleteElectricity()
+    {
+        Destroy(gameObject,arcDuration);
     }
 }
