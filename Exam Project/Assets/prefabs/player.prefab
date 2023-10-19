@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2083885924792917310}
   - component: {fileID: 2083885924792917297}
-  - component: {fileID: 9161372344255268712}
   - component: {fileID: 5011331739354262573}
   - component: {fileID: 9186875235878579413}
   - component: {fileID: 1529680394572725558}
@@ -54,23 +53,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!114 &9161372344255268712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083885924792917311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0524e2244b66ea14c86664c939a0bb79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HealthPoints: 0
-  MaxHealthPoints: 0
-  charge: 0
-  maxCharge: 0
-  rechargeRate: 0
 --- !u!114 &5011331739354262573
 MonoBehaviour:
   m_ObjectHideFlags: 0
