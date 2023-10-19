@@ -1,36 +1,29 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using DigitalRuby.LightningBolt;
 using UnityEngine;
 
 public class Electricity : MonoBehaviour
 {
-    public List<Transform> objectsElectricityPassedThrough;
+    public List<GameObject> passedThrough;
+    public List<string> tags;
+    
+    [Header("Arc data")]
     public GameObject ArcObj;
     public float arcDistance;
     public float arcDuration;
     public float arcTravelSpeed;
 
+    public float electricDamage;
     [SerializeField] private ElectricArc rootElectricArc;
+    
 
-
-    public Transform testStart;
-
-    private void Start()
+    public void StartElectricArc(GameObject startObj)
     {
-        //StartElectricArc(testStart);
-    }
-
-    public void StartElectricArc(Transform startTransform)
-    {
-        Debug.Log("get root");
         //objectsElectricityPassedThrough.Add(startTransform);
-        rootElectricArc = new ElectricArc(this, startTransform);
-    }
-
-    public bool IsObjectPassedThrough(Transform checkTransform)
-    {
-        return objectsElectricityPassedThrough.Contains(checkTransform);
+        rootElectricArc = new ElectricArc(this, startObj);
     }
 
     public GameObject CreateBolt()
@@ -40,23 +33,30 @@ public class Electricity : MonoBehaviour
         return obj;
     }
 
-    public void ArcFound(ElectricArc currentArc, float travelDistance, Transform endTransform)
+    public void ArcFound(ElectricArc currentArc, float travelDistance, GameObject endObj)
     {
-        var coroutine = ArcTraveling(currentArc,travelDistance,endTransform);
+        var coroutine = ArcTraveling(currentArc,travelDistance,endObj);
         StartCoroutine(coroutine);
     }
     
-    IEnumerator ArcTraveling(ElectricArc currentArc, float travelDistance, Transform endTransform)
+    IEnumerator ArcTraveling(ElectricArc currentArc, float travelDistance, GameObject endObj)
     {
         Debug.Log("coroutine start");
         float timer = 0;
+        float timerInc = 0.05f;
         while (timer < (travelDistance /arcTravelSpeed))
         {
-            timer += 0.1f;
-            yield return new WaitForSeconds(.1f);
+            timer += timerInc;
+            Vector3 endPos = (currentArc.startObj.transform.position - endObj.transform.position).normalized *
+                             (travelDistance - arcTravelSpeed * timer); 
+            currentArc.arcObj.GetComponent<LightningBoltScript>().EndPosition = endPos;
+
+            
+            yield return new WaitForSeconds(timerInc);
         }
         
-        currentArc.nexArc = new ElectricArc(this,endTransform);
+        currentArc.arcObj.GetComponent<LightningBoltScript>().EndPosition = Vector3.zero;
+        currentArc.nexArc = new ElectricArc(this,endObj);
         Destroy(currentArc.arcObj,arcDuration);
         Debug.Log("coroutine end");
     }

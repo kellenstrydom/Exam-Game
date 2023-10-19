@@ -11,6 +11,6 @@ public class SpawnElectricity : MonoBehaviour
     {
         GameObject obj = Instantiate(electricityObj);
         
-        obj.GetComponent<Electricity>().StartElectricArc(startArc.transform);
+        obj.GetComponent<Electricity>().StartElectricArc(startArc);
     }
 }

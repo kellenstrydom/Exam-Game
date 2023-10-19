@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using DigitalRuby.LightningBolt;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [Serializable]
 public class ElectricArc : MonoBehaviour
 {
     public ElectricArc nexArc;
     public float arcDistance;
-    private Transform startTransform;
-    public Transform endTransform;
+    public GameObject startObj;
+    public GameObject endObj;
 
     public float travelDistance;
     private LightningBoltScript boltScript;
@@ -19,33 +21,35 @@ public class ElectricArc : MonoBehaviour
 
     private Electricity _electricity;
 
-    public ElectricArc(Electricity _electricity, Transform startTransform)
+    public ElectricArc(Electricity _electricity, GameObject startObj)
     {
         this._electricity = _electricity;
-        this.startTransform = startTransform;
+        this.startObj = startObj;
         arcDistance = this._electricity.arcDistance;
-        this._electricity.objectsElectricityPassedThrough.Add(this.startTransform);
+        this._electricity.passedThrough.Add(this.startObj);
         Debug.Log("Arc");
         FindNextArc();
     }
 
     void FindNextArc()
     {
-        Transform closest = null;
-        Collider[] hitColliders = Physics.OverlapSphere(startTransform.position, arcDistance);
-        Debug.Log(hitColliders.Length);
+        GameObject closest = null;
+        Collider[] hitColliders = Physics.OverlapSphere(startObj.transform.position, arcDistance);
+        //Debug.Log(hitColliders.Length);
         foreach (var hitCollider in hitColliders)
         {
-            if (!_electricity.IsObjectPassedThrough(hitCollider.transform))
+            //if (!_electricity.passedThrough.Contains(hitCollider.gameObject) && !_electricity.tags.Contains(hitCollider.tag))
+            if (!_electricity.passedThrough.Contains(hitCollider.gameObject) && !hitCollider.gameObject.GetComponent<EnemyData>())
             {
+                Debug.Log(!_electricity.passedThrough.Contains(hitCollider.gameObject) && !_electricity.tags.Contains(hitCollider.tag));
                 if (closest == null) 
-                    closest = hitCollider.transform;
+                    closest = hitCollider.gameObject;
                 else
                 {
-                    if (Vector3.Distance(hitCollider.transform.position, startTransform.position) <
-                        Vector3.Distance(closest.position, startTransform.position))
+                    if (Vector3.Distance(hitCollider.transform.position, startObj.transform.position) <
+                        Vector3.Distance(closest.transform.position, startObj.transform.position))
                     {
-                        closest = hitCollider.transform;
+                        closest = hitCollider.gameObject;
                     }
                 }
             }
@@ -56,13 +60,12 @@ public class ElectricArc : MonoBehaviour
         if (closest)
         {
             Debug.Log($"{closest.name} is the closest");
-            endTransform = closest;
+            endObj = closest;
             arcObj = _electricity.CreateBolt();
-            arcObj.GetComponent<LightningBoltScript>().StartObject = startTransform.gameObject;
-            arcObj.GetComponent<LightningBoltScript>().EndObject = endTransform.gameObject;
-
-            travelDistance = Vector3.Distance(startTransform.position, endTransform.position);
-            _electricity.ArcFound(this,travelDistance,endTransform);
+            arcObj.GetComponent<LightningBoltScript>().StartObject = startObj.gameObject;
+            arcObj.GetComponent<LightningBoltScript>().EndObject = endObj.gameObject;
+            travelDistance = Vector3.Distance(startObj.transform.position, endObj.transform.position);
+            _electricity.ArcFound(this,travelDistance,endObj);
         }
         else
         {
@@ -70,19 +73,6 @@ public class ElectricArc : MonoBehaviour
             _electricity.DeleteElectricity();
         }
     }
-
-    IEnumerator ArcTraveling()
-    {
-        Debug.Log("coroutine start");
-        float timer = 0;
-        while (timer < (travelDistance /_electricity.arcTravelSpeed))
-        {
-            timer += 0.1f;
-            yield return new WaitForSeconds(.1f);
-        }
-        
-        nexArc = new ElectricArc(_electricity,endTransform);
-        Debug.Log("coroutine end");
-    }
+    
     
 }

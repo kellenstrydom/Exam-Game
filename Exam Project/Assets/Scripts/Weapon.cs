@@ -7,7 +7,9 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] private PlayerControls _playerControls;
-    
+    [SerializeField] private PlayerInfo _playerInfo;
+    public float damageAmount;
+
     public List<AttackClass> lightAttacks;
     public List<AttackClass> heavyAttacks;
     
@@ -34,12 +36,15 @@ public class Weapon : MonoBehaviour
 
     public void LightAttack()
     {
+        if (!_playerInfo.UseCharge(lightAttacks[lightComboCount].chargeCost)) return;
+
         StartCoroutine(Attack(lightAttacks[lightComboCount]));
         lightComboCount = (lightComboCount +1) % lightAttacks.Count;
     }
 
     public void HeavyAttack()
     {
+        if (!_playerInfo.UseCharge(heavyAttacks[heavyComboCount].chargeCost)) return;
         StartCoroutine(Attack(heavyAttacks[heavyComboCount]));
         heavyComboCount = (heavyComboCount +1) % heavyAttacks.Count;
 
@@ -49,7 +54,7 @@ public class Weapon : MonoBehaviour
     {
         _playerControls.currentState = PlayerControls.ActionState.attacking;
         yield return new WaitForSeconds(currentAttack.startDelay);
-        currentAttack.Attack();
+        currentAttack.Attack(damageAmount);
         yield return new WaitForSeconds(currentAttack.hitBoxActiveDuration);
         currentAttack.EndAttack();
         yield return new WaitForSeconds(currentAttack.endDelay);

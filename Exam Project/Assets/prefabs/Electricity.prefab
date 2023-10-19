@@ -44,10 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dfaafeb1d0f024fbc7de3f0c4a92e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsElectricityPassedThrough: []
+  passedThrough: []
+  tags:
+  - Enemy
   ArcObj: {fileID: 6924301991854222579, guid: 9c718b941a5813544825cce203a5f24a, type: 3}
   arcDistance: 10
-  arcDuration: 2
-  arcTravelSpeed: 10
+  arcDuration: 1
+  arcTravelSpeed: 20
+  electricDamage: 0
   rootElectricArc: {fileID: 0}
-  testStart: {fileID: 0}

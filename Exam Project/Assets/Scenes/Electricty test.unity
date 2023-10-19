@@ -566,11 +566,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2527194044606453854, guid: 01795063d54f89149b8d0bbd2a16b362, type: 3}
   m_PrefabInstance: {fileID: 5645778135862360074}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1659581997 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5113304911003514451, guid: 01795063d54f89149b8d0bbd2a16b362, type: 3}
-  m_PrefabInstance: {fileID: 5645778135862360074}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1839320867
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,10 +937,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 350042337543799354, guid: 9c718b941a5813544825cce203a5f24a, type: 3}
-      propertyPath: EndObject
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 350042337543799354, guid: 9c718b941a5813544825cce203a5f24a, type: 3}
       propertyPath: StartObject
       value: 
       objectReference: {fileID: 1659581992}
@@ -1071,10 +1062,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electricity
       objectReference: {fileID: 0}
-    - target: {fileID: 8613490384279328689, guid: 562888e8397f8374c82a0742492fd234, type: 3}
-      propertyPath: testStart
-      value: 
-      objectReference: {fileID: 1659581997}
+    - target: {fileID: 8613490384279328688, guid: 562888e8397f8374c82a0742492fd234, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8613490384279328690, guid: 562888e8397f8374c82a0742492fd234, type: 3}
       propertyPath: m_RootOrder
       value: 5

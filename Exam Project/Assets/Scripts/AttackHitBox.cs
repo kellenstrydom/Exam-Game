@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class AttackHitBox : MonoBehaviour
 {
+    public float damageToDeal;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("HITTTT");
+            other.GetComponent<EnemyData>().TakeDamage(damageToDeal);
         }
     }
 }
