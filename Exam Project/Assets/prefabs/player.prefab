@@ -102,9 +102,9 @@ MonoBehaviour:
   orientation: {fileID: 2083885925128524107}
   objColider: {fileID: 2083885926190186087}
   camera: {fileID: 0}
-  camOffset: {x: 0, y: 0, z: 0}
-  camAngleDeg: {x: 0, y: 0, z: 0}
-  useSceneCamPos: 1
+  camOffset: {x: 0, y: 10, z: -6}
+  camAngleDeg: {x: 60, y: 0, z: 0}
+  useSceneCamPos: 0
 --- !u!96 &9186875235878579413
 TrailRenderer:
   serializedVersion: 2

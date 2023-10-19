@@ -16,7 +16,6 @@ public class ElectriAttack : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
-        Debug.Log(!electricityObj.GetComponent<Electricity>().tags.Contains(other.tag) && other.gameObject != gameObject);
         if (!electricityObj.GetComponent<Electricity>().tags.Contains(other.tag) && other.gameObject != gameObject) return;
         
         Debug.Log(name + " ZAPP");

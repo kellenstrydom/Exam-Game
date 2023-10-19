@@ -38,18 +38,20 @@ public class ElectricArc : MonoBehaviour
         //Debug.Log(hitColliders.Length);
         foreach (var hitCollider in hitColliders)
         {
-            //if (!_electricity.passedThrough.Contains(hitCollider.gameObject) && !_electricity.tags.Contains(hitCollider.tag))
-            if (!_electricity.passedThrough.Contains(hitCollider.gameObject) && !hitCollider.gameObject.GetComponent<EnemyData>())
+            if (hitCollider.CompareTag("Enemy"))
             {
-                Debug.Log(!_electricity.passedThrough.Contains(hitCollider.gameObject) && !_electricity.tags.Contains(hitCollider.tag));
-                if (closest == null) 
-                    closest = hitCollider.gameObject;
-                else
+                //if (!_electricity.passedThrough.Contains(hitCollider.gameObject) && !_electricity.tags.Contains(hitCollider.tag))
+                if (!_electricity.passedThrough.Contains(hitCollider.gameObject))
                 {
-                    if (Vector3.Distance(hitCollider.transform.position, startObj.transform.position) <
-                        Vector3.Distance(closest.transform.position, startObj.transform.position))
-                    {
+                    if (closest == null) 
                         closest = hitCollider.gameObject;
+                    else
+                    {
+                        if (Vector3.Distance(hitCollider.transform.position, startObj.transform.position) <
+                            Vector3.Distance(closest.transform.position, startObj.transform.position))
+                        {
+                            closest = hitCollider.gameObject;
+                        }
                     }
                 }
             }
