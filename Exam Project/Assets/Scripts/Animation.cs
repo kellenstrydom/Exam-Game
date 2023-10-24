@@ -15,46 +15,30 @@ public class Animation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if (Input.GetButtonDown("Horizontal"))
+      if (Input.GetKey("w") || Input.GetKey("a") || Input.GetKey("s") || Input.GetKey("d"))
         {
             Run();
-            NotTalking();
+         
         }
-      else
+      else 
         {
-            Talk();
+            
             NotRunning();
         }
 
-      if (Input.GetButtonDown("Vertical"))
-        {
-            Run();
-            NotTalking();
-        }
-        else
-        {
-            Talk();
-            NotRunning();
-        }
     }
 
     public void Run()
     {
-        animator.SetBool("Run", true);
+        animator.SetBool("isRunning", true);
     }
 
-    public void Talk() 
-    {
-        animator.SetBool("Talk", true);
-    }
 
     public void NotRunning()
     {
-        animator.SetBool("Run", false);
-    }
-
-    public void NotTalking()
-    {
-        animator.SetBool("Talk", false);
+        animator.SetBool("isRunning", false); 
     }
 }
+
+
+
