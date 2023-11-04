@@ -40,4 +40,19 @@ public class PlayerInfo : MonoBehaviour
         charge -= amount;
         return true;
     }
+
+    public void TakeDamage(float damageAmount)
+    {
+        HealthPoints -= damageAmount;
+
+        if (HealthPoints <= 0)
+        {
+            Death();
+        }
+    }
+
+    void Death()
+    {
+        // death
+    }
 }

@@ -1,30 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Animation : MonoBehaviour
+public class PlayerAnimation : MonoBehaviour
 {
 
     private Animator animator;
+    private 
+    
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0 || Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0) 
-        {
-            Run();
-         
-        }
-        else 
-        {
-            NotRunning();
-        }
-
+        throw new NotImplementedException();
     }
 
     public void Run()
@@ -38,6 +32,3 @@ public class Animation : MonoBehaviour
         animator.SetBool("isRunning", false); 
     }
 }
-
-
-
