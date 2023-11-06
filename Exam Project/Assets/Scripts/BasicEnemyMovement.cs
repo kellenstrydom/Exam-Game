@@ -12,11 +12,14 @@ public class BasicEnemyMovement : MonoBehaviour
 
     public float maxOffset = 0.5f;
     private Vector3 offset;
+    private Rigidbody rb;
 
     private void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
-
+        
+        
+        
         offset = new Vector3(Random.Range(-maxOffset, maxOffset), 0, Random.Range(-maxOffset, maxOffset));
     }
 

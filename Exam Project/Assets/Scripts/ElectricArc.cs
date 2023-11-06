@@ -28,6 +28,7 @@ public class ElectricArc : MonoBehaviour
         arcDistance = this._electricity.arcDistance;
         this._electricity.passedThrough.Add(this.startObj);
         Debug.Log("Arc");
+        startObj.GetComponent<EnemyData>()?.TakeDamage(_electricity.arcDamage);
         FindNextArc();
     }
 

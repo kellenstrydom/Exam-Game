@@ -81,28 +81,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerControls: {fileID: 0}
+  _playerInfo: {fileID: 0}
+  damageAmount: 1
   lightAttacks:
-  - hitBox: {fileID: 7913441221403609382}
+  - damageMultiplier: 0.75
+    hitBox: {fileID: 7913441221403609382}
     startDelay: 0.1
     hitBoxActiveDuration: 0.2
     endDelay: 0.1
-  - hitBox: {fileID: 7913441223056758563}
+    chargeCost: 0
+  - damageMultiplier: 0.75
+    hitBox: {fileID: 7913441223056758563}
     startDelay: 0.1
     hitBoxActiveDuration: 0.2
     endDelay: 0.1
-  - hitBox: {fileID: 7913441221583070568}
+    chargeCost: 0
+  - damageMultiplier: 1.25
+    hitBox: {fileID: 7913441221583070568}
     startDelay: 0.1
     hitBoxActiveDuration: 0.2
     endDelay: 0.1
+    chargeCost: 0
   heavyAttacks:
-  - hitBox: {fileID: 7913441222487405526}
+  - damageMultiplier: 1
+    hitBox: {fileID: 7913441222487405526}
     startDelay: 0.2
     hitBoxActiveDuration: 0.2
     endDelay: 0.2
-  - hitBox: {fileID: 7913441223014613414}
+    chargeCost: 2
+  - damageMultiplier: 1
+    hitBox: {fileID: 7913441223014613414}
     startDelay: 0.2
     hitBoxActiveDuration: 0.2
     endDelay: 0.2
+    chargeCost: 2
   lightComboCount: 0
   heavyComboCount: 0
   comboTimer: 0
@@ -147,6 +159,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 334123929990199329}
     m_Modifications:
+    - target: {fileID: 6652154355599671351, guid: 6e69c52b91a9fda4398f77a70057ff99, type: 3}
+      propertyPath: arcDamage
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7244494055454989209, guid: 6e69c52b91a9fda4398f77a70057ff99, type: 3}
       propertyPath: m_Name
       value: Electric HitBox (1)
@@ -305,6 +321,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 334123929990199329}
     m_Modifications:
+    - target: {fileID: 6652154355599671351, guid: 6e69c52b91a9fda4398f77a70057ff99, type: 3}
+      propertyPath: arcDamage
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7244494055454989209, guid: 6e69c52b91a9fda4398f77a70057ff99, type: 3}
       propertyPath: m_Name
       value: Electric HitBox

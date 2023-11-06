@@ -7,6 +7,7 @@ public class ElectriAttack : MonoBehaviour
 {
     [SerializeField] private GameObject electricityObj;
     private bool hasArced;
+    public float arcDamage;
 
     private void Update()
     {
@@ -28,6 +29,6 @@ public class ElectriAttack : MonoBehaviour
         Debug.Log("Make ZAPPP");
         GameObject obj = Instantiate(electricityObj);
         
-        obj.GetComponent<Electricity>().StartElectricArc(startArc);
+        obj.GetComponent<Electricity>().StartElectricArc(startArc, arcDamage);
     }
 }

@@ -15,14 +15,17 @@ public class Electricity : MonoBehaviour
     public float arcDistance;
     public float arcDuration;
     public float arcTravelSpeed;
+    public float arcDamage;
+    public float stunTime;
 
     public float electricDamage;
     [SerializeField] private ElectricArc rootElectricArc;
     
 
-    public void StartElectricArc(GameObject startObj)
+    public void StartElectricArc(GameObject startObj, float damage, float stunTime = 0)
     {
         //objectsElectricityPassedThrough.Add(startTransform);
+        arcDamage = damage;
         rootElectricArc = new ElectricArc(this, startObj);
     }
 

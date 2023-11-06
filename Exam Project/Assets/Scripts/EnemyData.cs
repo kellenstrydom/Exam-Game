@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyData : MonoBehaviour
 {
     public float maxHealth = 5f;
+    [SerializeField]
     private float currentHealth;
 
     private void Start()

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: fc5da63207a2c0248ae2fd29a80934b7, type: 2}
 --- !u!1 &75067092
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,6 +491,10 @@ PrefabInstance:
       propertyPath: rechargeRate
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1529680394572725558, guid: 19d7d7c0e965d7d4faf082c2ebfec236, type: 3}
+      propertyPath: MaxHealthPoints
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2083885924792917310, guid: 19d7d7c0e965d7d4faf082c2ebfec236, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -543,6 +547,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3986481090204960975, guid: 19d7d7c0e965d7d4faf082c2ebfec236, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5011331739354262573, guid: 19d7d7c0e965d7d4faf082c2ebfec236, type: 3}
       propertyPath: camera
       value: 
@@ -551,6 +559,10 @@ PrefabInstance:
       propertyPath: weapon
       value: 
       objectReference: {fileID: 751473889}
+    - target: {fileID: 5011331739354262573, guid: 19d7d7c0e965d7d4faf082c2ebfec236, type: 3}
+      propertyPath: moveSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5011331739354262573, guid: 19d7d7c0e965d7d4faf082c2ebfec236, type: 3}
       propertyPath: camOffset.x
       value: 0
@@ -591,6 +603,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8678163476808073460, guid: 1299758efcdb4224e9b0ea80ba5fe7bb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678163476808073460, guid: 1299758efcdb4224e9b0ea80ba5fe7bb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8678163476846469648, guid: 1299758efcdb4224e9b0ea80ba5fe7bb, type: 3}
       propertyPath: cylinder
       value: 
@@ -643,6 +663,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: lamp
       objectReference: {fileID: 0}
+    - target: {fileID: 8678163476846469869, guid: 1299758efcdb4224e9b0ea80ba5fe7bb, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678163476846469869, guid: 1299758efcdb4224e9b0ea80ba5fe7bb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1299758efcdb4224e9b0ea80ba5fe7bb, type: 3}
 --- !u!1 &806930136
@@ -662,7 +690,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &806930137
 MeshCollider:
@@ -900,18 +928,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4306814131670520, guid: 59ccd1309cd2ac94a8700faf3ab6a78d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.9952643
-      objectReference: {fileID: 0}
-    - target: {fileID: 4306814131670520, guid: 59ccd1309cd2ac94a8700faf3ab6a78d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.9952643
-      objectReference: {fileID: 0}
-    - target: {fileID: 4306814131670520, guid: 59ccd1309cd2ac94a8700faf3ab6a78d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.9952643
-      objectReference: {fileID: 0}
-    - target: {fileID: 4306814131670520, guid: 59ccd1309cd2ac94a8700faf3ab6a78d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.142234
       objectReference: {fileID: 0}
@@ -950,6 +966,14 @@ PrefabInstance:
     - target: {fileID: 4306814131670520, guid: 59ccd1309cd2ac94a8700faf3ab6a78d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388041851106172674, guid: 59ccd1309cd2ac94a8700faf3ab6a78d, type: 3}
+      propertyPath: lungeForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388041851106172674, guid: 59ccd1309cd2ac94a8700faf3ab6a78d, type: 3}
+      propertyPath: attackRange
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59ccd1309cd2ac94a8700faf3ab6a78d, type: 3}
@@ -1155,33 +1179,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1468221554}
     - target: {fileID: 64672206024705792, guid: 54d369dba93dd5d4e9db448825472dad, type: 3}
-      propertyPath: damageAmount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 64672206024705792, guid: 54d369dba93dd5d4e9db448825472dad, type: 3}
       propertyPath: _playerControls
       value: 
       objectReference: {fileID: 1468221548}
-    - target: {fileID: 64672206024705792, guid: 54d369dba93dd5d4e9db448825472dad, type: 3}
-      propertyPath: heavyAttacks.Array.data[0].chargeCost
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 64672206024705792, guid: 54d369dba93dd5d4e9db448825472dad, type: 3}
-      propertyPath: heavyAttacks.Array.data[1].chargeCost
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 64672206024705792, guid: 54d369dba93dd5d4e9db448825472dad, type: 3}
-      propertyPath: lightAttacks.Array.data[0].damageMultiplier
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 64672206024705792, guid: 54d369dba93dd5d4e9db448825472dad, type: 3}
-      propertyPath: lightAttacks.Array.data[1].damageMultiplier
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 64672206024705792, guid: 54d369dba93dd5d4e9db448825472dad, type: 3}
-      propertyPath: lightAttacks.Array.data[2].damageMultiplier
-      value: 1.25
-      objectReference: {fileID: 0}
     - target: {fileID: 5315781227395203627, guid: 54d369dba93dd5d4e9db448825472dad, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1230,10 +1230,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapon
       objectReference: {fileID: 0}
-    - target: {fileID: 6127885120990849144, guid: 54d369dba93dd5d4e9db448825472dad, type: 3}
-      propertyPath: electricityObj
-      value: 
-      objectReference: {fileID: 8613490384279328688, guid: 562888e8397f8374c82a0742492fd234, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54d369dba93dd5d4e9db448825472dad, type: 3}
 --- !u!1001 &8001468215124968002
