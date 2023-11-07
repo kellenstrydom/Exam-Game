@@ -75,26 +75,38 @@ public class PlayerInfo : MonoBehaviour
         Debug.Log("dead");
     }
 
-    public void UpgradeMaxHealth(float increaseAmount, float cost)
+    public bool UpgradeMaxHealth(float cost, float increaseAmount = 1)
     {
+        if (cost > currency) return false;
+        
         currency -= cost;
 
         MaxHealthPoints += increaseAmount;
         HealthPoints += increaseAmount;
+
+        return true;
     }
     
-    public void UpgradeMaxCharge(float increaseAmount, float cost)
+    public bool UpgradeMaxCharge(float cost, float increaseAmount = 1)
     {
+        if (cost > currency) return false;
+        
         currency -= cost;
 
         maxCharge += increaseAmount;
         charge += increaseAmount;
+        
+        return true;
     }
     
-    public void UpgrageRechargeRate(float increaseAmount, float cost)
+    public bool UpgradeRechargeRate(float cost, float increaseAmount = 0.1f)
     {
+        if (cost > currency) return false;
+        
         currency -= cost;
 
         rechargeRate += increaseAmount;
+        
+        return true;
     }
 }
