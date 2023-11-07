@@ -37,6 +37,18 @@ public class Animation : MonoBehaviour
     {
         animator.SetBool("isRunning", false); 
     }
+
+    public void Attackinhg()
+    {
+        animator.SetBool("isAttackinhg", true);
+    }
+
+
+    public void NotAttackinhg()
+    {
+        animator.SetBool("isAttackinhg", false);
+    }
+
 }
 
 
