@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5011331739354262573}
   - component: {fileID: 9186875235878579413}
   - component: {fileID: 1529680394572725558}
+  - component: {fileID: 8309710988051619005}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -208,11 +209,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0524e2244b66ea14c86664c939a0bb79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerControls: {fileID: 0}
+  currency: 0
   HealthPoints: 0
   MaxHealthPoints: 0
   charge: 0
   maxCharge: 5
   rechargeRate: 0.2
+--- !u!114 &8309710988051619005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083885924792917311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6448b61d4b3b9b40a41ce07cdcda739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSlider: {fileID: 0}
+  chargeSlider: {fileID: 0}
+  _playerInfo: {fileID: 1529680394572725558}
 --- !u!1 &2083885925128524104
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,6 +468,10 @@ PrefabInstance:
     - target: {fileID: 100112, guid: 753b38eb36b5add498f220edebff3f9b, type: 3}
       propertyPath: m_Name
       value: TTBoyB
+      objectReference: {fileID: 0}
+    - target: {fileID: 100112, guid: 753b38eb36b5add498f220edebff3f9b, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400112, guid: 753b38eb36b5add498f220edebff3f9b, type: 3}
       propertyPath: m_RootOrder

@@ -507,6 +507,14 @@ PrefabInstance:
       propertyPath: useSceneCamPos
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8309710988051619005, guid: 19d7d7c0e965d7d4faf082c2ebfec236, type: 3}
+      propertyPath: chargeSlider
+      value: 
+      objectReference: {fileID: 1295351717}
+    - target: {fileID: 8309710988051619005, guid: 19d7d7c0e965d7d4faf082c2ebfec236, type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 838179017}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19d7d7c0e965d7d4faf082c2ebfec236, type: 3}
 --- !u!114 &751473889 stripped
@@ -1007,21 +1015,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0524e2244b66ea14c86664c939a0bb79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1468221558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302278111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6448b61d4b3b9b40a41ce07cdcda739, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthSlider: {fileID: 838179017}
-  chargeSlider: {fileID: 1295351717}
-  _playerInfo: {fileID: 1468221554}
 --- !u!4 &1609007940 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2083885925128524107, guid: 19d7d7c0e965d7d4faf082c2ebfec236, type: 3}
