@@ -49,6 +49,17 @@ public class Animation : MonoBehaviour
         animator.SetBool("isAttackinhg", false);
     }
 
+    public void  Dashing()
+    {
+        animator.SetBool("isDashing", true);
+    }
+
+
+    public void NotDashin()
+    {
+        animator.SetBool("isDashing", false);
+    }
+
 }
 
 
