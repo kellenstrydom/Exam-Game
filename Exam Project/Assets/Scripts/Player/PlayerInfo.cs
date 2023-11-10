@@ -109,4 +109,10 @@ public class PlayerInfo : MonoBehaviour
         
         return true;
     }
+
+    public void Heal(float healAmount)
+    {
+        HealthPoints += healAmount;
+        if (HealthPoints > MaxHealthPoints) HealthPoints = MaxHealthPoints;
+    }
 }
