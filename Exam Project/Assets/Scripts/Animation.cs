@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,27 +7,67 @@ public class Animation : MonoBehaviour
 {
 
     private Animator animator;
+
+    public PlayerControls.ActionState preActionState;
+    public PlayerControls _Controls;
+    
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+
+        _Controls = GetComponent<PlayerControls>();
+
+        preActionState = _Controls.currentState;
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0 || Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0) 
+        switch (preActionState)
         {
-            Run();
-         
-        }
-        else 
-        {
-            NotRunning();
+            case PlayerControls.ActionState.moving:
+                Run(_Controls.currentState == preActionState);
+                break;
+            case PlayerControls.ActionState.attacking:
+                Attacking(_Controls.currentState == preActionState);
+                break;
+            case PlayerControls.ActionState.dashing:
+                Dashing(_Controls.currentState == preActionState);
+                break;
         }
 
+        switch (_Controls.currentState)
+        {
+            case PlayerControls.ActionState.moving:
+                Run(_Controls.currentState == preActionState);
+                break;
+            case PlayerControls.ActionState.attacking:
+                Attacking(_Controls.currentState == preActionState);
+                break;
+            case PlayerControls.ActionState.dashing:
+                Dashing(_Controls.currentState == preActionState);
+                break;
+        }
+
+        preActionState = _Controls.currentState;
     }
 
+    public void Run(bool isOn)
+    {
+        animator.SetBool("isRunning", isOn);
+    }
+    
+    public void Attacking(bool isOn)
+    {
+        animator.SetBool("isAttackinhg", isOn);
+    }
+    
+    public void  Dashing(bool isOn)
+    {
+        animator.SetBool("isDashing", isOn);
+    }
+    
     public void Run()
     {
         animator.SetBool("isRunning", true);

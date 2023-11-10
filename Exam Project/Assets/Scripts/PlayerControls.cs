@@ -7,6 +7,7 @@ public class PlayerControls : MonoBehaviour
 {
     public enum ActionState
     {
+        idle,
         moving,
         dashing,
         attacking
@@ -16,6 +17,7 @@ public class PlayerControls : MonoBehaviour
     private float VerticalInput;
 
     public ActionState currentState;
+    public Animation _PAnimation;
         
     [Header("Movement")]
     public float moveSpeed;
@@ -79,7 +81,7 @@ public class PlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentState == ActionState.moving)
+        if (currentState == ActionState.moving || currentState == ActionState.idle)
         {
             GetInput();
             Move();
@@ -94,6 +96,12 @@ public class PlayerControls : MonoBehaviour
         HorizontalInput = Input.GetAxisRaw("Horizontal");
         VerticalInput = Input.GetAxisRaw("Vertical");
         inputDir = new Vector3(HorizontalInput, 0, VerticalInput);
+        if (inputDir == Vector3.zero)
+            currentState = ActionState.idle;
+        else
+        {
+            currentState = ActionState.moving;
+        }
         if (inputDir.magnitude > 1) inputDir = inputDir.normalized;
 
         if (inputDir != Vector3.zero)
@@ -166,6 +174,7 @@ public class PlayerControls : MonoBehaviour
     {
         // camera offset
         camera.transform.position = transform.position + camOffset;
+        camera.transform.rotation = Quaternion.Euler(camAngleDeg);
 
     }
 
@@ -212,5 +221,13 @@ public class PlayerControls : MonoBehaviour
         dashKey = KeyCode.Space;
         lightAttackKey = KeyCode.Mouse0;
         heavyAttackKey = KeyCode.Mouse1;
+    }
+
+    void DoAnimations()
+    {
+        
+        _PAnimation.Run(currentState == ActionState.moving);
+        _PAnimation.Dashing(currentState == ActionState.dashing);
+        _PAnimation.Attacking(currentState == ActionState.attacking);
     }
 }
