@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class portal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            //load.LoadWinScene();
+        }
+    }
     // Update is called once per frame
     void Update()
     {

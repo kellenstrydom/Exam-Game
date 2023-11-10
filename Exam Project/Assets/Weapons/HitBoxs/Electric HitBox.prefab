@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6652154355599671351}
   m_Layer: 0
   m_Name: Electric HitBox
-  m_TagString: AttackHitBox
+  m_TagString: ElectricHitBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,3 +125,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   electricityObj: {fileID: 8613490384279328688, guid: 562888e8397f8374c82a0742492fd234, type: 3}
+  arcDamage: 0

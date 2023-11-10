@@ -13,7 +13,7 @@ public class LightSwitch : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player collider")) // Check if it's the player's collider
+        if (other.CompareTag("ElectricHitBox")) // Check if it's the player's collider
         {
             isOn = !isOn; // Toggle the light state
             lampLight.enabled = isOn; // Enable or disable the light

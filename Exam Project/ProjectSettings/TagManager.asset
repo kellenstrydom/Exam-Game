@@ -9,6 +9,8 @@ TagManager:
   - Ground
   - NPC
   - Player collider
+  - Undefined
+  - ElectricHitBox
   layers:
   - Default
   - TransparentFX
