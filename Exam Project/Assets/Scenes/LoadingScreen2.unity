@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotatingImage: {fileID: 180195292}
-  nextSceneName: LoadingScreen3
+  nextSceneName: Level 1
   loadTime: 5
 --- !u!1 &180195290
 GameObject:

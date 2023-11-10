@@ -32,4 +32,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoadingScreen5.unity
     guid: a7784296d63cc824c90f4ebd46de5c57
+  - enabled: 1
+    path: Assets/Scenes/Tee/Tutorial with player 1.unity
+    guid: 68246fc536ebc7240bfaee059e6fe1ed
+  - enabled: 1
+    path: Assets/Scenes/Tee/Level 1.unity
+    guid: 586972e94a1293c44a15fe1acd754e33
+  - enabled: 1
+    path: Assets/Scenes/Roodepoort 1.unity
+    guid: 64e6da949a2b1ea4a8dec00edf3cecd0
   m_configObjects: {}
