@@ -565,10 +565,10 @@ GameObject:
   - component: {fileID: 7347787397109980625}
   - component: {fileID: 624147720}
   - component: {fileID: 4205772889877240254}
-  - component: {fileID: 4388041851106172674}
   - component: {fileID: 2255125440222219492}
+  - component: {fileID: -1395306266407594643}
   m_Layer: 0
-  m_Name: LesserImpPrefab
+  m_Name: ThrowingEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -604,7 +604,7 @@ Animator:
   m_GameObject: {fileID: 1204596009998050}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 279252e7473c10e4eab95fe64f974013, type: 3}
-  m_Controller: {fileID: 9100000, guid: 31cb2d49315327f41b46ffd00aa3b3e6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 339b93a779722864981540fce9c23fc7, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -685,25 +685,7 @@ MonoBehaviour:
   OutOfLeashRange: 0
   LeashTime: 2
   _rangedEnemyAttack: {fileID: 0}
-  _meleeEnemy: {fileID: 4388041851106172674}
---- !u!114 &4388041851106172674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204596009998050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cd3c3dd663b9024f90bb09b75b92ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackRange: 1.2
-  attackSpeed: 0.5
-  castTime: 0
-  hitBox: {fileID: 7838337553469788483}
-  damage: 1
-  spawnPos: {fileID: 4306814131670520}
+  _meleeEnemy: {fileID: 0}
 --- !u!114 &2255125440222219492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,6 +699,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
+  currentHealth: 0
+--- !u!114 &-1395306266407594643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204596009998050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fb7baa4b7b6814681670ba5ca69045, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 5
+  attackSpeed: 0.5
+  castTime: 0.25
+  projectile: {fileID: 2518593341707468749, guid: 63e74bc34795d8c428e400ec9534a957, type: 3}
+  damage: 1
+  projectileForce: 7
+  spawnPos: {fileID: 4423522218011022}
 --- !u!1 &1235278862634992
 GameObject:
   m_ObjectHideFlags: 0
