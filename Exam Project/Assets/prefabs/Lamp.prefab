@@ -161,19 +161,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 78465313213380503, guid: 29ce3d69800f3f343951bef0487fbeb0, type: 3}
   m_PrefabInstance: {fileID: 4096367955373123654}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1535844836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4165824410358063057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5cc6ff005af24d48a7066eb7ada43a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lampLight: {fileID: 464089227}
 --- !u!65 &6162524465998114952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -187,3 +174,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8694459, y: 7.965003, z: 0.82741725}
   m_Center: {x: -0.0000028610652, y: 3.9825015, z: 0.016989574}
+--- !u!114 &1535844836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4165824410358063057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5cc6ff005af24d48a7066eb7ada43a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lampLight: {fileID: 464089227}
+  intensityIncrease: 4
