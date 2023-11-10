@@ -16,7 +16,7 @@ public class Animation : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-        _Controls = GetComponent<PlayerControls>();
+        _Controls = GetComponentInParent<PlayerControls>();
 
         preActionState = _Controls.currentState;
 
