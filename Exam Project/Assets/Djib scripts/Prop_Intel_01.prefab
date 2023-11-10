@@ -94,7 +94,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197829711376315079}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -112,8 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5cc6ff005af24d48a7066eb7ada43a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cylinder: {fileID: 1197829711376315079}
-  pointLight: {fileID: 4033631464419313027}
+  lampLight: {fileID: 4033631464419313027}
 --- !u!1 &4551941375851083219
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ TagManager:
   - AttackHitBox
   - Ground
   - NPC
+  - Player collider
   layers:
   - Default
   - TransparentFX
