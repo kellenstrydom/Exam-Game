@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0524e2244b66ea14c86664c939a0bb79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerControls: {fileID: 0}
+  _playerControls: {fileID: 5011331739354262573}
   currency: 0
   HealthPoints: 0
   MaxHealthPoints: 0
@@ -654,9 +654,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.26208815
-  m_Height: 1.4878763
+  m_Height: 1.4027946
   m_Direction: 1
-  m_Center: {x: -0.0056478977, y: 0.6582572, z: 0.01954635}
+  m_Center: {x: -0.0056478977, y: 0.70079803, z: 0.01954635}
 --- !u!114 &926225092715526830
 MonoBehaviour:
   m_ObjectHideFlags: 0
