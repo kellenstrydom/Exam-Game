@@ -5,68 +5,54 @@ using UnityEngine;
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
-    public string[] lines;
     public float textSpeed;
 
-    private int index;
-    private string currentLine;
+    private string[] currentLines;
+    private int currentIndex = 0;
 
-    // Start is called before the first frame update
-    void Start()
+    private bool isDialogueActive = false; 
+
+    public void StartDialogue(string[] lines)
     {
+        currentLines = lines;
+        currentIndex = 0;
         textComponent.text = string.Empty;
-        StartDialogue();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (textComponent.text == currentLine)
-            {
-                NextLine();
-            }
-            else
-            {
-                StopAllCoroutines();
-                textComponent.text = currentLine;
-            }
-        }
-    }
-
-    void StartDialogue()
-    {
-        index = 0;
-        currentLine = lines[index];
+        isDialogueActive = true; 
         StartCoroutine(TypeLine());
     }
 
     IEnumerator TypeLine()
     {
         int charIndex = 0;
-        currentLine = "";  // Initialize the current line
-        while (charIndex < lines[index].Length)
+        string currentLine = "";
+
+        while (charIndex < currentLines[currentIndex].Length)
         {
-            currentLine += lines[index][charIndex];
+            currentLine += currentLines[currentIndex][charIndex];
             textComponent.text = currentLine;
             charIndex++;
             yield return new WaitForSeconds(textSpeed);
         }
     }
 
-    void NextLine()
+    public bool NextLine()
     {
-        if (index < lines.Length - 1)
+        if (currentIndex < currentLines.Length - 1)
         {
-            index++;
-            currentLine = string.Empty;
-            textComponent.text = currentLine;
+            currentIndex++;
+            textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
+            return true;
         }
         else
         {
-            gameObject.SetActive(false);
+            isDialogueActive = false; 
+            return false;
         }
+    }
+
+    public bool IsDialogueActive()
+    {
+        return isDialogueActive;
     }
 }
