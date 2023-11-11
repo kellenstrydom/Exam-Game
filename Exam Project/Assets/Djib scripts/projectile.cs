@@ -5,6 +5,7 @@ using UnityEngine;
 public class projectile : MonoBehaviour
 {
     public float bulletSpeed = 10f;
+    public float damage;
     void Start()
     {
         Rigidbody bulletRigidbody = GetComponent<Rigidbody>();
@@ -18,12 +19,10 @@ public class projectile : MonoBehaviour
         // Check what the bullet collided with
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Handle enemy hit (e.g., deal damage, apply effects)
-            // You can access the collided enemy object using collision.gameObject
+            collision.gameObject.GetComponent<PlayerInfo>().TakeDamage(damage);
+            Destroy(gameObject);
         }
         else
-
-       
-        Destroy(gameObject);
+            Destroy(gameObject);
     }
 }
