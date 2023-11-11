@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5190506343418470259}
   - component: {fileID: 1023594972771966633}
   - component: {fileID: 1036402478}
+  - component: {fileID: 6037002325366431245}
   m_Layer: 0
   m_Name: Motor
   m_TagString: Untagged
@@ -97,3 +98,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.0370257, y: 2.5212822, z: 3.504716}
   m_Center: {x: -0.0076481104, y: -0.010858357, z: 0.55569506}
+--- !u!114 &6037002325366431245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6096132530597991812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adc5f120a5b42a442a93689c6b558a19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPowered: 0
