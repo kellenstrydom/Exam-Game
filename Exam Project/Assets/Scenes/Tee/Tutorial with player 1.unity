@@ -6315,6 +6315,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7531561537832211368, guid: 76646c8837a4b58409d302342a42514e, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 205550006}
     - target: {fileID: 7531561537832211371, guid: 76646c8837a4b58409d302342a42514e, type: 3}
       propertyPath: m_Name
       value: PlayerUI
@@ -6418,6 +6422,10 @@ PrefabInstance:
     - target: {fileID: 7531561539184400230, guid: 76646c8837a4b58409d302342a42514e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7715504121560832318, guid: 76646c8837a4b58409d302342a42514e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -121.92169
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76646c8837a4b58409d302342a42514e, type: 3}
