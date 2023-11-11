@@ -20,23 +20,28 @@ public class LevelManager : MonoBehaviour
 
     public void KillEnemy()
     {
-        
+        enemyCount++;
+        CheckObjective();
     }
 
     public void LightLamp()
     {
-        
+        lampCount++;
+        CheckObjective();
     }
 
     public void PowerGenerator()
     {
-        
+        generatorCount++;
+        CheckObjective();
     }
     
-    public void CheckObjective()
+    public bool CheckObjective()
     {
         objectivesComplete = (enemyCount >= enemyObjective && lampCount >= lampObjective &&
                               generatorCount >= generatorObjective);
+
+        return objectivesComplete;
     }
     
     public void PlayerDeath()
