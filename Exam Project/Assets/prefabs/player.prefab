@@ -69,7 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   _PAnimation: {fileID: 0}
-  moveSpeed: 3
+  moveSpeed: 5
   sprintSpeed: 7
   dashForce: 40
   dashDuration: 0.2
