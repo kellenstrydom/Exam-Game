@@ -397,6 +397,129 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &772132321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 772132326}
+  - component: {fileID: 772132325}
+  - component: {fileID: 772132324}
+  - component: {fileID: 772132323}
+  - component: {fileID: 772132322}
+  m_Layer: 0
+  m_Name: Shopkeeper
+  m_TagString: NPC
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &772132322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772132321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ab4e38ccf690a4391134d0514812e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 593860423}
+  lines:
+  - 'JEFF: Hey Mr...'
+  - 'SHOPKEEPER: Hello child, I haven''t seen you since the last time you came here.
+    Can I be of any assistance? '
+  - 'JEFF: I was wondering if the sangoma was here.'
+  - 'SHOPKEEPER: Unfortunately, I''m unawareof her whereabouts, as she seemed to
+    have disappeard the day after you visted for his services.'
+  - 'JEFF: Well, that''''s rather odd.'
+  - 'SHOPKEEPER: Yeah, it truly is...'
+  - 'Jeff: May I ask that you inform me as soon as he comes back.'
+  - 'SHOPKEEPER: I will contact you as soon as I get in touch with her. '
+  interactText: {fileID: 400179542}
+--- !u!65 &772132323
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772132321}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.2142181, y: 2, z: 2.7419052}
+  m_Center: {x: 0.15247345, y: 0, z: -0.04219055}
+--- !u!23 &772132324
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772132321}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2946c7ec6f54ef1459520f8f1b4d200d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &772132325
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772132321}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &772132326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772132321}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -169.92, y: -134.6968, z: 77.48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &862976167
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,7 +1047,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449048106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -169.92, y: -134.6968, z: 73.34}
+  m_LocalPosition: {x: -169.92, y: -134.6968, z: 72.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1214,7 +1337,7 @@ GameObject:
   - component: {fileID: 1702681958}
   - component: {fileID: 1702681957}
   m_Layer: 0
-  m_Name: Extra NPC
+  m_Name: 'Manager '
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1234,13 +1357,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 593860423}
   lines:
-  - 'JEFF: Ekse Bhuti wam, long time no see.'
-  - 'MAINTENANCE GUY: Awe Jeff, how have you been man? '
-  - 'JEFF: Let''s just say I''m alive... Can I ask you for a favour? '
-  - 'MAINTENANCE GUY: Yeah sure, what''s up?'
-  - 'JEFF: Do you know where the manager is? '
-  - 'MAINTENANCE GUY: He is Diepsloot... I heard he lives by that area. '
-  - 'JEFF: Dankie Bruh, I will see you around and be safe out there. '
+  - 'MANAGER: Jeff, what the hell happened out there?'
+  - 'JEFF: Well Sir, you know how I love to enlighten the world with my prowess. '
+  - 'MANAGER: Oh, cut the crap, Jeff! The entire cities in chaos because of you. '
+  - 'JEFF: I think I might know to fix it sir, but it wont be easy. Which is why
+    I''m seeking information from you. '
+  - 'MANAGER: and how, do you assumeI can help? Explain yourself. '
+  - 'JEFF: Sir as much as I would like to be pulling your leg right now, I believe
+    that the current events have a connection with the owner of the power plants
+    family. '
+  - 'MANAGER: Explain... '
+  - 'JEFF: Oh, you see I met this wonderful woman, who seem to be able to read this
+    book that has the family crest of the EX- family, and she discovered that there''s
+    a sangoma who holds a grudge against the owner''s bloodline...'
+  - ...apparently a twisted revenge born from the betrayal of the owners ancestors,
+    but I also discovered something odd... my name was also in the book.
+  - 'MANAGER: Jeff, may I ask? What is your full name?'
+  - 'JEFF:I don''t see the relevance right now but, my name is Jeffrey Shaka Mazibuko '
+  - 'MANAGER: That cant be... That would mean,you are the illegitimate son of my
+    old friend Shaka Dlamini, which '
+  - 'JEFF: Huh? Then you must be the president of America. [With a shocked face]'
+  - 'MANAGER: I''m quite serious child...This is no time for your sarcastic remarks.
+    [With a serious face]'
+  - 'JEFF: I''m sorry... do you mean I suffered all my life, even though my father
+    is a freaking multimillionaire... [with tears whirling up his face]. Can you
+    please excuse me. I will vist you another time. '
   interactText: {fileID: 400179542}
 --- !u!65 &1702681958
 BoxCollider:
@@ -1275,7 +1416,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1b4ca997d14dd7f4b804e31bc2e05e2e, type: 2}
+  - {fileID: 2100000, guid: bbd61d14ea989fd47afea7a774a271dc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1313,7 +1454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702681956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -169.92, y: -134.6968, z: 73.34}
+  m_LocalPosition: {x: -170.39, y: -134.6968, z: 74.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1438,6 +1579,130 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1726318525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1726318530}
+  - component: {fileID: 1726318529}
+  - component: {fileID: 1726318528}
+  - component: {fileID: 1726318527}
+  - component: {fileID: 1726318526}
+  m_Layer: 0
+  m_Name: Sangoma 2
+  m_TagString: NPC
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1726318526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726318525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ab4e38ccf690a4391134d0514812e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 593860423}
+  lines:
+  - 'SANGOMA: Don''t fix that last substation Mr Mazibuko!'
+  - 'JEFF: It;s you... why don''t you want me to fix it.'
+  - 'SANGOMA: Because if you did, you will lose your job. '
+  - 'JEFF: But if I don''t innocent people will die. '
+  - 'SANGOMA: Listen here..I am going to take over Joburg so youu can decide, do
+    you want to become part of the innocent people?'
+  - 'JEFF: Why are you doing this? '
+  - 'SANGOMA: Your family broke a promise to me. This attack is the fault of your
+    ancestors and the failings of the government.'
+  - 'JEFF: Well them, I''m going to stop you!'
+  - 'SANGOMA: VOETSEK!'
+  interactText: {fileID: 400179542}
+--- !u!65 &1726318527
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726318525}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.2142181, y: 2, z: 2.7419052}
+  m_Center: {x: 0.15247345, y: 0, z: -0.04219055}
+--- !u!23 &1726318528
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726318525}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2946c7ec6f54ef1459520f8f1b4d200d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1726318529
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726318525}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1726318530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726318525}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -169.08, y: -134.6968, z: 82.11}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1840446923
 PrefabInstance:
