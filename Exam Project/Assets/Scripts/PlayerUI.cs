@@ -31,9 +31,9 @@ public class PlayerUI : MonoBehaviour
     void DisplayObjectives()
     {
         string completeMsg;
-        if (_levelManager.objectivesComplete)
-            completeMsg = "Area"
-        
+        // if (_levelManager.objectivesComplete)
+        //     completeMsg = "Area"
+        //
         objectiveText.text = $"Objectives: \n \n" +
                              $"Turn on Generators: {_levelManager.generatorCount}/{_levelManager.generatorObjective} \n" +
                              $"Turn on Lamps: {_levelManager.lampCount}/{_levelManager.lampObjective} \n" +
