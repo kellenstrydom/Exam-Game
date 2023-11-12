@@ -11,6 +11,7 @@ TagManager:
   - Player collider
   - Undefined
   - ElectricHitBox
+  - Level Manager
   layers:
   - Default
   - TransparentFX

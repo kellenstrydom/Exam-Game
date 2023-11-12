@@ -206,5 +206,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5cc6ff005af24d48a7066eb7ada43a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cylinder: {fileID: 0}
-  pointLight: {fileID: 8678163476808073462}
+  lampLight: {fileID: 8678163476808073462}
+  intensityIncrease: 1

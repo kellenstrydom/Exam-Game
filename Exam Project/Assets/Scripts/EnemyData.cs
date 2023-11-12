@@ -16,12 +16,21 @@ public class EnemyData : MonoBehaviour
     
     public void TakeDamage(float damage)
     {
+        if (currentHealth <= 0) return;
+        
         currentHealth -= damage;
         Debug.Log($"{name} took {damage} dmg");
         if (currentHealth <= 0)
         {
-            Destroy(gameObject,5f);
-            gameObject.SetActive(false);
+            Dead();
         }
+    }
+
+    void Dead()
+    {
+        GameObject.FindGameObjectWithTag("Level Manager").GetComponent<LevelManager>().KillEnemy();
+        
+        Destroy(gameObject,5f);
+        gameObject.SetActive(false);
     }
 }

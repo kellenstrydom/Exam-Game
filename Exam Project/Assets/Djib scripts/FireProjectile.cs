@@ -6,6 +6,7 @@ public class FireProjectile : MonoBehaviour
 {
     public float bulletSpeed = 10f;
     public float lifetime = 5f;
+    public float damage;
     void Start()
     {
         Rigidbody bulletRigidbody = GetComponent<Rigidbody>();
@@ -20,8 +21,9 @@ public class FireProjectile : MonoBehaviour
         // Check what the bullet collided with
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Handle enemy hit (e.g., deal damage, apply effects)
-            // You can access the collided enemy object using collision.gameObject
+            collision.gameObject.GetComponent<PlayerInfo>().TakeDamage(damage);
+            Destroy(gameObject);
+            
         }
     
     }
