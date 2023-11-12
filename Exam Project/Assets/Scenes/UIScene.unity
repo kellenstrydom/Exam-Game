@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &369052732 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7531561537578654567, guid: 76646c8837a4b58409d302342a42514e, type: 3}
+  m_PrefabInstance: {fileID: 2039374950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &400179542 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1575421137780490686, guid: 76646c8837a4b58409d302342a42514e, type: 3}
@@ -303,6 +314,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &569051104 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7531561537926319196, guid: 76646c8837a4b58409d302342a42514e, type: 3}
+  m_PrefabInstance: {fileID: 2039374950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &593860423 stripped
@@ -1446,6 +1468,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1529680394572725558, guid: 8c47c9c0fdc9dd34ba41c4f196648c92, type: 3}
+      propertyPath: MaxHealthPoints
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2083885924792917310, guid: 8c47c9c0fdc9dd34ba41c4f196648c92, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1494,6 +1520,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: player 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8309710988051619005, guid: 8c47c9c0fdc9dd34ba41c4f196648c92, type: 3}
+      propertyPath: chargeSlider
+      value: 
+      objectReference: {fileID: 369052732}
+    - target: {fileID: 8309710988051619005, guid: 8c47c9c0fdc9dd34ba41c4f196648c92, type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 569051104}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c47c9c0fdc9dd34ba41c4f196648c92, type: 3}
 --- !u!1001 &2039374950
