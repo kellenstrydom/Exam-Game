@@ -692,7 +692,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSlider: {fileID: 7531561537926319196}
   chargeSlider: {fileID: 7531561537578654567}
-  _playerInfo: {fileID: 0}
+  objectiveText: {fileID: 0}
 --- !u!1 &7531561537840434806
 GameObject:
   m_ObjectHideFlags: 0
@@ -3936,7 +3936,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -308.68, y: -96.4}
+  m_AnchoredPosition: {x: -308.68, y: -84.19}
   m_SizeDelta: {x: 253.818, y: 319.566}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7531561539496916404
