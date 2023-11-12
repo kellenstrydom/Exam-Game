@@ -1,9 +1,17 @@
 fileFormatVersion: 2
 guid: 9fa3e36450eda954aa24c5d0759c6287
+<<<<<<< Updated upstream
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
+=======
+timeCreated: 1502555919
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName: {}
+  serializedVersion: 4
+>>>>>>> Stashed changes
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -21,10 +29,13 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
+<<<<<<< Updated upstream
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
   ignoreMasterTextureLimit: 0
+=======
+>>>>>>> Stashed changes
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -33,12 +44,21 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< Updated upstream
     filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 0
     wrapV: 0
     wrapW: 0
+=======
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: -1
+    wrapV: -1
+    wrapW: -1
+>>>>>>> Stashed changes
   nPOTScale: 1
   lightmap: 0
   compressionQuality: 50
@@ -47,14 +67,20 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
+=======
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+>>>>>>> Stashed changes
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 0
   textureShape: 1
+<<<<<<< Updated upstream
   singleChannelComponent: 0
   flipbookRows: 1
   flipbookColumns: 1
@@ -69,12 +95,21 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
+=======
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+>>>>>>> Stashed changes
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+<<<<<<< Updated upstream
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -101,11 +136,14 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+>>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline: []
     physicsShape: []
+<<<<<<< Updated upstream
     bones: []
     spriteID: 
     internalID: 0
@@ -118,6 +156,9 @@ TextureImporter:
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
+=======
+  spritePackingTag: 
+>>>>>>> Stashed changes
   userData: 
   assetBundleName: 
   assetBundleVariant: 
