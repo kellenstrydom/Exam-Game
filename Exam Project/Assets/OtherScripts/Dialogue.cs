@@ -10,15 +10,24 @@ public class Dialogue : MonoBehaviour
     private string[] currentLines;
     private int currentIndex = 0;
 
-    private bool isDialogueActive = false; 
+    private bool isDialogueActive = false;
+
+    private Coroutine typeLineCoroutine;
 
     public void StartDialogue(string[] lines)
     {
         currentLines = lines;
         currentIndex = 0;
         textComponent.text = string.Empty;
-        isDialogueActive = true; 
-        StartCoroutine(TypeLine());
+        isDialogueActive = true;
+
+        if (typeLineCoroutine != null)
+        {
+
+            StopCoroutine(typeLineCoroutine);
+        }
+
+        typeLineCoroutine = StartCoroutine(TypeLine());
     }
 
     IEnumerator TypeLine()
@@ -28,6 +37,11 @@ public class Dialogue : MonoBehaviour
 
         while (charIndex < currentLines[currentIndex].Length)
         {
+            if (!isDialogueActive)
+            {
+                yield break;
+            }
+
             currentLine += currentLines[currentIndex][charIndex];
             textComponent.text = currentLine;
             charIndex++;
@@ -41,12 +55,19 @@ public class Dialogue : MonoBehaviour
         {
             currentIndex++;
             textComponent.text = string.Empty;
-            StartCoroutine(TypeLine());
+
+            if (typeLineCoroutine != null)
+            {
+
+                StopCoroutine(typeLineCoroutine);
+            }
+
+            typeLineCoroutine = StartCoroutine(TypeLine());
             return true;
         }
         else
         {
-            isDialogueActive = false; 
+            isDialogueActive = false;
             return false;
         }
     }
