@@ -20052,6 +20052,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4209894927975163438, guid: f6b6337d758e56f45b8941b8f79cc19b, type: 3}
+      propertyPath: lampObjective
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209894927975163438, guid: f6b6337d758e56f45b8941b8f79cc19b, type: 3}
+      propertyPath: enemyObjective
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209894927975163438, guid: f6b6337d758e56f45b8941b8f79cc19b, type: 3}
+      propertyPath: generatorObjective
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4209894927975163439, guid: f6b6337d758e56f45b8941b8f79cc19b, type: 3}
       propertyPath: m_RootOrder
       value: 2

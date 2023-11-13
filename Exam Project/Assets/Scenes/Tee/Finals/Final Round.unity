@@ -4434,6 +4434,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4209894927975163438, guid: f6b6337d758e56f45b8941b8f79cc19b, type: 3}
+      propertyPath: lampObjective
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209894927975163438, guid: f6b6337d758e56f45b8941b8f79cc19b, type: 3}
+      propertyPath: enemyObjective
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 4209894927975163439, guid: f6b6337d758e56f45b8941b8f79cc19b, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -9564,7 +9572,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 696012958257116587, guid: 74da33a4f7b0be0488c59fe5dbc60642, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.65
+      value: 11.017
       objectReference: {fileID: 0}
     - target: {fileID: 696012958257116587, guid: 74da33a4f7b0be0488c59fe5dbc60642, type: 3}
       propertyPath: m_LocalPosition.z
