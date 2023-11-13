@@ -567,6 +567,7 @@ GameObject:
   - component: {fileID: 4205772889877240254}
   - component: {fileID: 2255125440222219492}
   - component: {fileID: -1395306266407594643}
+  - component: {fileID: 1555227611599479611}
   m_Layer: 2
   m_Name: ThrowingEnemy
   m_TagString: Enemy
@@ -719,6 +720,20 @@ MonoBehaviour:
   damage: 1
   projectileForce: 7
   spawnPos: {fileID: 4423522218011022}
+--- !u!114 &1555227611599479611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204596009998050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f2c6e094f200f4a9decf613fd72df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAnimator: {fileID: 95958191548540600}
+  _behaviour: {fileID: 4205772889877240254}
 --- !u!1 &1235278862634992
 GameObject:
   m_ObjectHideFlags: 0

@@ -567,6 +567,7 @@ GameObject:
   - component: {fileID: 4205772889877240254}
   - component: {fileID: 4388041851106172674}
   - component: {fileID: 2255125440222219492}
+  - component: {fileID: 7543979501163358067}
   m_Layer: 0
   m_Name: MeleeEnemy
   m_TagString: Enemy
@@ -719,6 +720,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+--- !u!114 &7543979501163358067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204596009998050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f2c6e094f200f4a9decf613fd72df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyAnimator: {fileID: 95958191548540600}
+  _behaviour: {fileID: 4205772889877240254}
+  preActionState: 0
 --- !u!1 &1235278862634992
 GameObject:
   m_ObjectHideFlags: 0

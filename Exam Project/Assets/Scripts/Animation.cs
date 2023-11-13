@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Animation : MonoBehaviour
@@ -27,7 +28,7 @@ public class Animation : MonoBehaviour
         switch (preActionState)
         {
             case PlayerControls.ActionState.moving:
-                Run(_Controls.currentState == preActionState);
+                //Run(_Controls.currentState == preActionState);
                 break;
             case PlayerControls.ActionState.attacking:
                 Attacking(_Controls.currentState == preActionState);
@@ -40,13 +41,16 @@ public class Animation : MonoBehaviour
         switch (_Controls.currentState)
         {
             case PlayerControls.ActionState.moving:
-                Run(_Controls.currentState == preActionState);
+                Run(true);
                 break;
             case PlayerControls.ActionState.attacking:
-                Attacking(_Controls.currentState == preActionState);
+                Attacking(true);
                 break;
             case PlayerControls.ActionState.dashing:
                 Dashing(_Controls.currentState == preActionState);
+                break;
+            case PlayerControls.ActionState.idle:
+                Run(false);
                 break;
         }
 
@@ -60,7 +64,7 @@ public class Animation : MonoBehaviour
     
     public void Attacking(bool isOn)
     {
-        animator.SetBool("isAttackinhg", isOn);
+        animator.SetBool("Attacking", isOn);
     }
     
     public void  Dashing(bool isOn)

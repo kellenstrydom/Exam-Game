@@ -81,6 +81,7 @@ public class PlayerControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.GetChild(0).localPosition = Vector3.zero;
         if (currentState == ActionState.moving || currentState == ActionState.idle)
         {
             GetInput();
