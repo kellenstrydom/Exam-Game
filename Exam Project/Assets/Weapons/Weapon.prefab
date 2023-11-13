@@ -88,32 +88,32 @@ MonoBehaviour:
     hitBox: {fileID: 7913441221403609382}
     startDelay: 0.1
     hitBoxActiveDuration: 0.2
-    endDelay: 0.1
+    endDelay: 0
     chargeCost: 0
   - damageMultiplier: 0.75
     hitBox: {fileID: 7913441223056758563}
     startDelay: 0.1
     hitBoxActiveDuration: 0.2
-    endDelay: 0.1
+    endDelay: 0
     chargeCost: 0
   - damageMultiplier: 1.25
     hitBox: {fileID: 7913441221583070568}
     startDelay: 0.1
     hitBoxActiveDuration: 0.2
-    endDelay: 0.1
+    endDelay: 0
     chargeCost: 0
   heavyAttacks:
   - damageMultiplier: 1
     hitBox: {fileID: 7913441222487405526}
-    startDelay: 0.2
+    startDelay: 0.1
     hitBoxActiveDuration: 0.2
-    endDelay: 0.2
+    endDelay: 0
     chargeCost: 2
   - damageMultiplier: 1
     hitBox: {fileID: 7913441223014613414}
-    startDelay: 0.2
+    startDelay: 0.1
     hitBoxActiveDuration: 0.2
-    endDelay: 0.2
+    endDelay: 0
     chargeCost: 2
   lightComboCount: 0
   heavyComboCount: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4646455124555090121}
   - component: {fileID: 1575506561}
   - component: {fileID: 1575506560}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemyProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ded7a09cd5b28489d4c7776e8bb15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 1
+  lifeTime: 1.5
   damageAmount: 0
 --- !u!1 &8775170140788152797
 GameObject:
@@ -140,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8619596693520141308}
   - component: {fileID: 8373166538960461296}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Area Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

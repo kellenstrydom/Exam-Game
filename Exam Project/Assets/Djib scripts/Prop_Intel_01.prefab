@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 837519681854231314}
   - component: {fileID: 6103738839224090134}
   - component: {fileID: 1103689290885378298}
+  - component: {fileID: 6702576667743699608}
   m_Layer: 0
   m_Name: Prop_Intel_01
   m_TagString: Untagged
@@ -113,6 +114,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lampLight: {fileID: 4033631464419313027}
+  intensityIncrease: 7
+  isLightOn: 0
+--- !u!114 &6702576667743699608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197829711376315079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.9607843, g: 0.5543509, b: 0.19607839, a: 1}
+  outlineWidth: 7
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &4551941375851083219
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,26 +15,40 @@ public class PlayerUI : MonoBehaviour
 
     [SerializeField] private TMP_Text objectiveText;
 
+    [Header("Objective List")]
+    public RectTransform objectiveTransform;
     public float showRectPosY;
     public float hideRectPosY;
-    public float moveSpeed;
+    public float slideTime;
     public bool isObjectiveOpen;
-
-    public RectTransform objectiveTransform;
 
     private PlayerInfo _playerInfo;
     private LevelManager _levelManager;
+    
+    [Header("Objective List")]
+    [SerializeField]
+    private bool isPaused;
+    public GameObject pauseMenu;
 
     private void Start()
     {
         _playerInfo = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInfo>();
         _levelManager = GameObject.FindGameObjectWithTag("Level Manager").GetComponent<LevelManager>();
+        isPaused = true;
+        Pause();
+
+        isObjectiveOpen = true;
+        objectiveTab();
     }
 
     void Update()
     {
-        healthSlider.value = (int)(_playerInfo.HealthPoints / _playerInfo.MaxHealthPoints * 100);
-        chargeSlider.value = (int)(_playerInfo.charge / _playerInfo.maxCharge * 100);
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Pause();
+        if (isPaused) return;
+        
+        healthSlider.value = (int)(_playerInfo.healthPoints / PlayerInfo.MaxHealthPoints * 100);
+        chargeSlider.value = (int)(_playerInfo.charge / PlayerInfo.MaxCharge * 100);
         
         DisplayObjectives();
 
@@ -85,14 +99,37 @@ public class PlayerUI : MonoBehaviour
 
         while (t < 1)
         {
-            Debug.Log(t);
-            t += Time.deltaTime;
+            t += Time.deltaTime * 1/slideTime;
             if (t > 1) t = 1;
             float newY = Mathf.Lerp(yStart, yEnd, t);
             objectiveTransform.anchoredPosition = new Vector2(objectiveTransformPos.x, newY);
             yield return null;
         }
-        
     }
-    
+
+    public void Pause()
+    {
+        if (isPaused)
+        {
+            pauseMenu.SetActive(false);
+            Time.timeScale = 1;
+        }
+        else
+        {
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0;
+        }
+
+        isPaused = !isPaused;
+    }
+
+    public void Restart()
+    {
+        _levelManager.RestartLevel();
+    }
+
+    public void Quit()
+    {
+        _levelManager.QuitToMainMenu();
+    }
 }
