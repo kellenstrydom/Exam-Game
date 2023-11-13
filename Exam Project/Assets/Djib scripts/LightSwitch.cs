@@ -5,7 +5,7 @@ using UnityEngine;
 public class LightSwitch : MonoBehaviour
 {
     public Light lampLight;
-    public float intensityIncrease = 1.0f; // Adjust this value to control the rate of intensity increase
+    public float intensityIncrease = 4.0f; // Adjust this value to control the rate of intensity increase
     public bool isLightOn;
     
     private void Start()
