@@ -3,40 +3,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.Serialization;
 
 public class PlayerInfo : MonoBehaviour
 {
     public PlayerControls _playerControls;
+    private LevelManager _levelManager;
+    public GameObject bloodEffect;
 
     public float currency;
     
     [Header("Health")]
-    public float HealthPoints;
-    public float MaxHealthPoints;
+    public float healthPoints;
+    public static float MaxHealthPoints = 5;
     
     [Header("Charge")]
     public float charge;
-    public float maxCharge;
-    public float rechargeRate;
+    public static float MaxCharge = 5;
+    public static float RechargeRate = .5f;
 
     
 
     private void Start()
     {
-        HealthPoints = MaxHealthPoints;
-        charge = maxCharge;
+        ResetStats();
 
+        
+        _levelManager = GameObject.FindGameObjectWithTag("Level Manager").GetComponent<LevelManager>();
         _playerControls = GetComponent<PlayerControls>();
     }
 
     private void Update()
     {
-        if (charge < maxCharge)
+        if (charge < MaxCharge)
         {
-            charge += rechargeRate * Time.deltaTime;
-            if (charge > maxCharge)
+            charge += RechargeRate * Time.deltaTime;
+            if (charge > MaxCharge)
             {
-                charge = maxCharge;
+                charge = MaxCharge;
             }
         }
     }
@@ -58,10 +62,12 @@ public class PlayerInfo : MonoBehaviour
             return false;
         }
         
-        HealthPoints -= damageAmount;
-        Debug.Log($"player took {damageAmount} damage. {HealthPoints}hp remaining");
+        healthPoints -= damageAmount;
+        GameObject effect = Instantiate(bloodEffect, transform.position + new Vector3(0, 1, 0),Quaternion.identity);
+        Destroy(effect,1f);
+        Debug.Log($"player took {damageAmount} damage. {healthPoints}hp remaining");
 
-        if (HealthPoints <= 0)
+        if (healthPoints <= 0)
         {
             Death();
         }
@@ -72,6 +78,7 @@ public class PlayerInfo : MonoBehaviour
     void Death()
     {
         // death
+        _levelManager.PlayerDeath();
         Debug.Log("dead");
     }
 
@@ -82,7 +89,7 @@ public class PlayerInfo : MonoBehaviour
         currency -= cost;
 
         MaxHealthPoints += increaseAmount;
-        HealthPoints += increaseAmount;
+        healthPoints += increaseAmount;
 
         return true;
     }
@@ -93,7 +100,7 @@ public class PlayerInfo : MonoBehaviour
         
         currency -= cost;
 
-        maxCharge += increaseAmount;
+        MaxCharge += increaseAmount;
         charge += increaseAmount;
         
         return true;
@@ -105,14 +112,26 @@ public class PlayerInfo : MonoBehaviour
         
         currency -= cost;
 
-        rechargeRate += increaseAmount;
+        RechargeRate += increaseAmount;
         
         return true;
     }
 
     public void Heal(float healAmount)
     {
-        HealthPoints += healAmount;
-        if (HealthPoints > MaxHealthPoints) HealthPoints = MaxHealthPoints;
+        healthPoints += healAmount;
+        if (healthPoints > MaxHealthPoints) healthPoints = MaxHealthPoints;
+    }
+
+    public void Respawn(Vector3 pos)
+    {
+        transform.position = pos;
+        ResetStats();
+    }
+
+    public void ResetStats()
+    {
+        healthPoints = MaxHealthPoints;
+        charge = MaxCharge;
     }
 }

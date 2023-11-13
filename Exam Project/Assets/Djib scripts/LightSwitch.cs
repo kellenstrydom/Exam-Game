@@ -24,23 +24,36 @@ public class LightSwitch : MonoBehaviour
         }
     }
 
-    public void LightLamp()
+    public void LightLamp(bool objective = true)
     {
         if (isLightOn) return;
         
         StartCoroutine(IncreaseIntensityOverTime());
         isLightOn = true;
-        GameObject.FindGameObjectWithTag("Level Manager").GetComponent<LevelManager>().LightLamp();
+        GetComponent<Outline>().enabled = false;
+        
+        if (objective)
+            GameObject.FindGameObjectWithTag("Level Manager").GetComponent<LevelManager>().LightLamp();
 
     }
 
     IEnumerator IncreaseIntensityOverTime()
     {
-        while (lampLight.intensity < 1.0f) // You can adjust this value as needed (1.0f is the maximum intensity)
+        float t = 0;
+
+        while (t < 1)
         {
-            lampLight.intensity += intensityIncrease * Time.deltaTime*3;
+            t += Time.deltaTime * 1/.5f;
+            if (t > 1) t = 1;
+            lampLight.intensity = Mathf.Lerp(0, intensityIncrease, t);
             yield return null;
         }
+        
+        // while (lampLight.intensity < 1.0f) // You can adjust this value as needed (1.0f is the maximum intensity)
+        // {
+        //     lampLight.intensity += intensityIncrease * Time.deltaTime*3;
+        //     yield return null;
+        // }
     }
 }
   

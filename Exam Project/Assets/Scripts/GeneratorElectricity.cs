@@ -7,6 +7,8 @@ public class GeneratorElectricity : MonoBehaviour
 {
     public bool isPowered;
 
+    [Header("Lamps connected")] 
+    public List<LightSwitch> lampsConnected;
     private void Start()
     {
         isPowered = false;
@@ -26,5 +28,12 @@ public class GeneratorElectricity : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("Level Manager").GetComponent<LevelManager>().PowerGenerator();
         isPowered = true;
+        
+        GetComponent<Outline>().enabled = false;
+
+        foreach (var lamp in lampsConnected)
+        {
+            lamp.LightLamp();
+        }
     }
 }

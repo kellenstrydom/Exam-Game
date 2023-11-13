@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1023594972771966633}
   - component: {fileID: 1036402478}
   - component: {fileID: 6037002325366431245}
+  - component: {fileID: 6902847815931419325}
   m_Layer: 0
   m_Name: Motor
   m_TagString: Untagged
@@ -111,3 +112,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPowered: 0
+  lampsConnected: []
+--- !u!114 &6902847815931419325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6096132530597991812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.9607843, g: 0.5568628, b: 0.19607843, a: 1}
+  outlineWidth: 7
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
