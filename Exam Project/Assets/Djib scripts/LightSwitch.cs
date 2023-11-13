@@ -30,10 +30,10 @@ public class LightSwitch : MonoBehaviour
         
         StartCoroutine(IncreaseIntensityOverTime());
         isLightOn = true;
-        //GetComponent<Outline>().enabled = false;
         
         if (objective)
             GameObject.FindGameObjectWithTag("Level Manager").GetComponent<LevelManager>().LightLamp();
+        GetComponent<Outline>().enabled = false;
 
     }
 

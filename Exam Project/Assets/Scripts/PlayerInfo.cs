@@ -46,18 +46,13 @@ public class PlayerInfo : MonoBehaviour
             }
         }
         
-        FindClosestGen();
+        FindClosestGoal();
     }
 
-    void FindClosestGen()
+    void FindClosestGoal()
     {
-        Debug.Log("look at gen");
         Transform target;
-        if (_levelManager.generators.Count == 0)
-        {
-            target = _levelManager.endPoint;
-        }        
-        else
+        if (_levelManager.generators.Count != 0)
         {
             target = _levelManager.generators[0];
             foreach (var gen in _levelManager.generators)
@@ -68,7 +63,41 @@ public class PlayerInfo : MonoBehaviour
                     target = gen;
                 }
             }
+            closestGen.up = new Vector3(target.position.x - transform.position.x, target.position.z - transform.position.z,0).normalized;
+            return;
         }
+
+        if (_levelManager.npcs.Count!= 0)
+        {
+            target = _levelManager.npcs[0];
+            foreach (var trans in _levelManager.npcs)
+            {
+                if (Vector3.Distance(transform.position, trans.position) <
+                    Vector3.Distance(transform.position, target.position))
+                {
+                    target = trans;
+                }
+            }
+            closestGen.up = new Vector3(target.position.x - transform.position.x, target.position.z - transform.position.z,0).normalized;
+            return;
+        }
+        
+        if (_levelManager.notes.Count!= 0)
+        {
+            target = _levelManager.notes[0];
+            foreach (var trans in _levelManager.npcs)
+            {
+                if (Vector3.Distance(transform.position, trans.position) <
+                    Vector3.Distance(transform.position, target.position))
+                {
+                    target = trans;
+                }
+            }
+            closestGen.up = new Vector3(target.position.x - transform.position.x, target.position.z - transform.position.z,0).normalized;
+            return;
+        }
+        
+        target = _levelManager.endPoint;
         closestGen.up = new Vector3(target.position.x - transform.position.x, target.position.z - transform.position.z,0).normalized;
     }
 

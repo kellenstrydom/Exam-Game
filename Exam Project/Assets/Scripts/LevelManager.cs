@@ -13,11 +13,16 @@ public class LevelManager : MonoBehaviour
     public int enemyObjective;
     public int lampObjective;
     public int generatorObjective;
+    public int npcObjective;
+    public int noteObjective;
 
     [Header("Counts")] 
     public int enemyCount;
     public int lampCount;
     public int generatorCount;
+    public int npcCount;
+    public int noteCount;
+
 
     [Header("Can complete level")] 
     public bool objectivesComplete;
@@ -27,6 +32,8 @@ public class LevelManager : MonoBehaviour
 
     [Header("Goals")] 
     public List<Transform> generators;
+    public List<Transform> npcs;
+    public List<Transform> notes;
 
     public Transform endPoint;
 
@@ -55,13 +62,30 @@ public class LevelManager : MonoBehaviour
         CheckObjective();
     }
     
+    public void FindNote(Transform note)
+    {
+        noteCount++;
+        generators.Remove(note);
+        CheckObjective();
+    }
+    public void SpeakWithNPC(Transform npc)
+    {
+        npcCount++;
+        generators.Remove(npc);
+        CheckObjective();
+    }
+    
     public bool CheckObjective()
     {
         objectivesComplete = (enemyCount >= enemyObjective && lampCount >= lampObjective &&
-                              generatorCount >= generatorObjective);
+                              generatorCount >= generatorObjective &&
+                              noteCount >= noteObjective &&
+                              npcCount >= npcObjective);
 
         return objectivesComplete;
     }
+    
+    
     
     public void PlayerDeath()
     {

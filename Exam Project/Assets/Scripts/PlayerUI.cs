@@ -74,9 +74,11 @@ public class PlayerUI : MonoBehaviour
         
         
         objectiveText.text = $"Objectives: {completeMsg}\n \n" +
-                             $"Turn on Generators: {_levelManager.generatorCount}/{_levelManager.generatorObjective} \n \n" +
-                             $"Turn on Lamps: {_levelManager.lampCount}/{_levelManager.lampObjective} \n \n" +
-                             $"Defeat Tokoloshes: {_levelManager.enemyCount}/{_levelManager.enemyObjective}";
+                             $"Generators: {_levelManager.generatorCount}/{_levelManager.generatorObjective} \n \n" +
+                             $"Lamps: {_levelManager.lampCount}/{_levelManager.lampObjective} \n \n" +
+                             $"Tokoloshes: {_levelManager.enemyCount}/{_levelManager.enemyObjective} \n \n" +
+                             $"Notes: {_levelManager.noteCount}/{_levelManager.noteObjective} \n \n" +
+                             $"NPCs: {_levelManager.npcCount}/{_levelManager.npcObjective}";
     }
 
 
