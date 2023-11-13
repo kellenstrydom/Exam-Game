@@ -7,14 +7,19 @@ public class CableCar : MonoBehaviour
     public Transform startPoint;
     public Transform endPoint;
     public float movementSpeed = 5.0f;
-    public float stopDuration = 2.0f; // Adjust this to control how long the cable car stops at each point
+    public float stopDuration = 2.0f;
 
     private float currentStopTime = 0.0f;
-    private bool isMovingForward = true;
+    public bool isMovingForward = false;
 
     private void Update()
     {
         MoveCableCar();
+    }
+
+    public void StartMoving()
+    {
+        isMovingForward = true;
     }
 
     private void MoveCableCar()
@@ -34,20 +39,21 @@ public class CableCar : MonoBehaviour
                 }
             }
         }
-        else
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
         {
-            transform.position = Vector3.MoveTowards(transform.position, startPoint.position, movementSpeed * Time.deltaTime);
+            collision.transform.SetParent(transform);
+        }
+    }
 
-            if (Vector3.Distance(transform.position, startPoint.position) < 0.01f)
-            {
-                currentStopTime += Time.deltaTime;
-
-                if (currentStopTime >= stopDuration)
-                {
-                    isMovingForward = true;
-                    currentStopTime = 0.0f;
-                }
-            }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(null);
         }
     }
 }

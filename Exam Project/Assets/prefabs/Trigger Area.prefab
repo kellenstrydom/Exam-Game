@@ -125,7 +125,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5088648, y: 0, z: 2.0346024}
   m_Center: {x: 0.009490967, y: 0.026078708, z: -0.012639642}
---- !u!114 &6961633869039075754
+--- !u!114 &1165837495667592591
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,10 +134,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5658017752373031318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 736e4a40f44d1654abdc7792a4910c00, type: 3}
+  m_Script: {fileID: 11500000, guid: 60d68b176a020f24facda7bd0e63a263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: city 2
+  sceneToLoad: 
 --- !u!4 &8709408573322068869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1748164033223884841, guid: bc567933eeb3fc84987a3b0a2c87f78e, type: 3}
