@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,6 +30,7 @@ public class PlayerUI : MonoBehaviour
     [SerializeField]
     private bool isPaused;
     public GameObject pauseMenu;
+    public RectTransform compass;
 
     private void Start()
     {
@@ -56,6 +58,8 @@ public class PlayerUI : MonoBehaviour
         {
             objectiveTab();
         }
+        
+        PointCompass();
     }
 
     void DisplayObjectives()
@@ -105,6 +109,11 @@ public class PlayerUI : MonoBehaviour
             objectiveTransform.anchoredPosition = new Vector2(objectiveTransformPos.x, newY);
             yield return null;
         }
+    }
+
+    void PointCompass()
+    {
+        compass.rotation = _playerInfo.closestGen.rotation;
     }
 
     public void Pause()

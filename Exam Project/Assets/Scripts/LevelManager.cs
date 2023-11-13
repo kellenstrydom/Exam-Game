@@ -25,6 +25,11 @@ public class LevelManager : MonoBehaviour
     [Header("Respawn Pos")] 
     public Vector3 respawnPos;
 
+    [Header("Goals")] 
+    public List<Transform> generators;
+
+    public Transform endPoint;
+
     private void Start()
     {
         _playerInfo = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInfo>();
@@ -43,9 +48,10 @@ public class LevelManager : MonoBehaviour
         CheckObjective();
     }
 
-    public void PowerGenerator()
+    public void PowerGenerator(Transform generator)
     {
         generatorCount++;
+        generators.Remove(generator);
         CheckObjective();
     }
     

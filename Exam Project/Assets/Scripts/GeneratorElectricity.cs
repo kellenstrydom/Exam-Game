@@ -26,7 +26,7 @@ public class GeneratorElectricity : MonoBehaviour
 
     private void PowerGenerator()
     {
-        GameObject.FindGameObjectWithTag("Level Manager").GetComponent<LevelManager>().PowerGenerator();
+        GameObject.FindGameObjectWithTag("Level Manager").GetComponent<LevelManager>().PowerGenerator(transform);
         isPowered = true;
         
         GetComponent<Outline>().enabled = false;

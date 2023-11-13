@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.Serialization;
@@ -10,6 +11,7 @@ public class PlayerInfo : MonoBehaviour
     public PlayerControls _playerControls;
     private LevelManager _levelManager;
     public GameObject bloodEffect;
+    public Transform closestGen;
 
     public float currency;
     
@@ -43,6 +45,31 @@ public class PlayerInfo : MonoBehaviour
                 charge = MaxCharge;
             }
         }
+        
+        FindClosestGen();
+    }
+
+    void FindClosestGen()
+    {
+        Debug.Log("look at gen");
+        Transform target;
+        if (_levelManager.generators.Count == 0)
+        {
+            target = _levelManager.endPoint;
+        }        
+        else
+        {
+            target = _levelManager.generators[0];
+            foreach (var gen in _levelManager.generators)
+            {
+                if (Vector3.Distance(transform.position, gen.position) <
+                    Vector3.Distance(transform.position, target.position))
+                {
+                    target = gen;
+                }
+            }
+        }
+        closestGen.up = new Vector3(target.position.x - transform.position.x, target.position.z - transform.position.z,0).normalized;
     }
 
     public bool UseCharge(float amount)
