@@ -350,14 +350,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 364891980376192332, guid: ffdab3e23d4ec8f4eb63bbbee1d1d865, type: 3}
-      propertyPath: m_Size.z
-      value: 3.6383247
-      objectReference: {fileID: 0}
-    - target: {fileID: 364891980376192332, guid: ffdab3e23d4ec8f4eb63bbbee1d1d865, type: 3}
-      propertyPath: m_Center.z
-      value: -0.4904003
-      objectReference: {fileID: 0}
     - target: {fileID: 364891980376192333, guid: ffdab3e23d4ec8f4eb63bbbee1d1d865, type: 3}
       propertyPath: interactText
       value: 
@@ -366,20 +358,6 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 1476742775}
-    - target: {fileID: 6243387618910808731, guid: ffdab3e23d4ec8f4eb63bbbee1d1d865, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 12431e53782eed046b4530eae85f1abd, type: 2}
-    - target: {fileID: 6243387618910808731, guid: ffdab3e23d4ec8f4eb63bbbee1d1d865, type: 3}
-      propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'Head'\n\tTransform 'R Finger12'\n\tTransform
-        'L Foot'\n\tTransform 'L Finger12'\n\tTransform 'R Toe0'\n\tTransform 'L
-        Forearm'\n\tTransform 'R Finger21'\n\tTransform 'L Hand'\n\tTransform 'L
-        Finger11'\n\tTransform 'L UpperArm'\n\tand more ...\n\tFrom animation clip
-        '1HIdle'"
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffdab3e23d4ec8f4eb63bbbee1d1d865, type: 3}
 --- !u!1001 &618257256
@@ -1659,25 +1637,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19d7d7c0e965d7d4faf082c2ebfec236, type: 3}
---- !u!1 &2078587651 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 364891980376192322, guid: ffdab3e23d4ec8f4eb63bbbee1d1d865, type: 3}
-  m_PrefabInstance: {fileID: 615286351}
-  m_PrefabAsset: {fileID: 0}
---- !u!136 &2078587657
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2078587651}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &6961633869036012393
 PrefabInstance:
   m_ObjectHideFlags: 0
