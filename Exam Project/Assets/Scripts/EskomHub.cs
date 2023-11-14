@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -18,6 +19,15 @@ public class EskomHub : MonoBehaviour
     
     public static List<bool> DoorsOpen = new List<bool>(){true, false, false, false, false};
 
+    private static bool isComplete = false;
+
+    public GameObject winScreen;
+
+    private void Start()
+    {
+        //CompleteScene(4);
+        winScreen.SetActive(isComplete);
+    }
 
 
     public void GoToScene(int index)
@@ -36,6 +46,12 @@ public class EskomHub : MonoBehaviour
 
     public static void CompleteScene(int index)
     {
+        if (index == DoorsOpen.Count -1)
+        {
+            isComplete = true;
+            return;
+        }
         EskomHub.DoorsOpen[index + 1] = true;
+        
     }
 }
