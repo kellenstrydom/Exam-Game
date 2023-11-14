@@ -6924,7 +6924,7 @@ PrefabInstance:
     - target: {fileID: 4209894927975163438, guid: f6b6337d758e56f45b8941b8f79cc19b, type: 3}
       propertyPath: endPoint
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1357664691}
     - target: {fileID: 4209894927975163438, guid: f6b6337d758e56f45b8941b8f79cc19b, type: 3}
       propertyPath: npcObjective
       value: 1
@@ -15448,6 +15448,11 @@ BoxCollider:
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 97229e82747352a43b48688ec573f8e4, type: 3}
   m_PrefabInstance: {fileID: 1332016958}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1357664691 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6915294319536455396, guid: 4940d71d384ef00408cb8e3968050d00, type: 3}
+  m_PrefabInstance: {fileID: 800068088}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1365593099 stripped
 Transform:

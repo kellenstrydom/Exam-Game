@@ -14,10 +14,9 @@ public class EskomHub : MonoBehaviour
         "city 2",
         "Diepsloot",
         "City 3",
-        "S"
     };
     
-    public static List<bool> DoorsOpen = new List<bool>(){true, false, false, false, false};
+    public static List<bool> DoorsOpen = new List<bool>(){true, false, false, false};
 
     private static bool isComplete = false;
 

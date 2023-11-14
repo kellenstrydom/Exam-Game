@@ -47,6 +47,11 @@ public class LevelManager : MonoBehaviour
         respawnPos = _playerInfo.transform.position;
     }
 
+    private void Update()
+    {
+        CheckObjective();
+    }
+
     public void KillEnemy()
     {
         enemyCount++;
