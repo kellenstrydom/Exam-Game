@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class EndLevel : MonoBehaviour
 {
+    private void Start()
+    {
+        gameObject.SetActive(false);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
