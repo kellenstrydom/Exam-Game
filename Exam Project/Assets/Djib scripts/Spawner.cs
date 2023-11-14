@@ -4,31 +4,39 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    public GameObject meleeEnemyPrefab;
+    public GameObject shootingEnemyPrefab;
     public Transform[] spawnPoints;
-    public float spawnInterval = 3f;
-    // Start is called before the first frame update
+    public float spawnInterval = 4f;
+    public float spawnDuration = 15f;
+
     private void Start()
     {
-        StartCoroutine(SpawnEnemy());
+        StartCoroutine(SpawnEnemies());
     }
-    private IEnumerator SpawnEnemy()
+
+    private IEnumerator SpawnEnemies()
     {
-        while (true)
+        float elapsedTime = 0f;
+
+        while (elapsedTime < spawnDuration)
         {
             yield return new WaitForSeconds(spawnInterval);
 
-
             Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
+            // 1 out of 3 chance to spawn shooting enemy, 2 out of 3 chance to spawn melee enemy
+            if (Random.Range(0, 3) == 0)
+            {
+                Instantiate(shootingEnemyPrefab, spawnPoint.position, Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(meleeEnemyPrefab, spawnPoint.position, Quaternion.identity);
+            }
 
-            Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+            elapsedTime += spawnInterval;
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
 
