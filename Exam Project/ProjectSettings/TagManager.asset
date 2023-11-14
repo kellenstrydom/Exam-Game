@@ -12,6 +12,8 @@ TagManager:
   - Undefined
   - ElectricHitBox
   - Level Manager
+  - Door
+  - UI
   layers:
   - Default
   - TransparentFX
