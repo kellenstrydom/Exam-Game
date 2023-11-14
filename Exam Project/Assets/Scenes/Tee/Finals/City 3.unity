@@ -6340,6 +6340,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &583652539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2867454087291669005, guid: 76646c8837a4b58409d302342a42514e, type: 3}
+  m_PrefabInstance: {fileID: 583652536}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &583652540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1575421137780490686, guid: 76646c8837a4b58409d302342a42514e, type: 3}
+  m_PrefabInstance: {fileID: 583652536}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &588061436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1208891854551177645, guid: 05373ac36ded04d44a3640892fe02beb, type: 3}
@@ -18438,6 +18448,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 366204212795094016, guid: 67006dd2aaa5c0b488a13cae1d985dd2, type: 3}
+      propertyPath: interactText
+      value: 
+      objectReference: {fileID: 583652540}
+    - target: {fileID: 366204212795094016, guid: 67006dd2aaa5c0b488a13cae1d985dd2, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 583652539}
     - target: {fileID: 366204212795094017, guid: 67006dd2aaa5c0b488a13cae1d985dd2, type: 3}
       propertyPath: m_Name
       value: 'Manager '
@@ -18452,7 +18470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 366204212795094028, guid: 67006dd2aaa5c0b488a13cae1d985dd2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3955688
+      value: 3.72
       objectReference: {fileID: 0}
     - target: {fileID: 366204212795094028, guid: 67006dd2aaa5c0b488a13cae1d985dd2, type: 3}
       propertyPath: m_LocalPosition.z
