@@ -62,11 +62,13 @@ public class PlayerControls : MonoBehaviour
     
     private Vector3 inputDir;
     private Rigidbody rb;
+    private PlayerUI _playerUI;
+    
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
+        
         camera = Camera.main;
         // get cam offset
         if (useSceneCamPos)
@@ -76,11 +78,14 @@ public class PlayerControls : MonoBehaviour
         }
         
         SetInputKeys();
+
+        _playerUI = GameObject.FindWithTag("UI").GetComponent<PlayerUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (_playerUI.isPaused) return;
         transform.GetChild(0).localPosition = Vector3.zero;
         if (currentState == ActionState.moving || currentState == ActionState.idle)
         {

@@ -38,20 +38,7 @@ ModelImporter:
       might lower retargeting quality:\nNote: Activate translation DOF on avatar
       to improve retargeting quality.\n\t'Chest' is inbetween humanoid transforms
       and has rotation animation that will be discarded.\n"
-    animationRetargetingWarnings: "\nRetargeting quality report for clip 'mixamo.com':\n\tLeftLowerLeg
-      average position error 0.3 mm and maximum position error 3.4 mm at time 0:10
-      (12.3%) Frame 10\n\tRightLowerLeg average position error 0.2 mm and maximum
-      position error 1.3 mm at time 0:50 (61.7%) Frame 50\n\tLeftUpperArm average
-      position error 27.8 mm and maximum position error 36.0 mm at time 1: 2 (76.5%)
-      Frame 62\n\tLeftLowerArm average position error 15.9 mm and maximum position
-      error 21.0 mm at time 0:59 (72.8%) Frame 59\n\tLeftHand average position error
-      10.8 mm and maximum position error 20.8 mm at time 0:59 (72.8%) Frame 59\n\tRightUpperArm
-      average position error 33.3 mm and maximum position error 53.0 mm at time 0:25
-      (30.9%) Frame 25\n\tRightLowerArm average position error 17.4 mm and maximum
-      position error 25.1 mm at time 0:23 (28.4%) Frame 23\n\tRightHand average position
-      error 11.3 mm and maximum position error 22.0 mm at time 0:21 (25.9%) Frame
-      21\n\tHead average position error 37.6 mm and maximum position error 52.2 mm
-      at time 0:27 (33.3%) Frame 27\n"
+    animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
@@ -62,7 +49,36 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: mixamo.com
+      takeName: mixamo.com
+      internalID: -203655887218126122
+      firstFrame: 0
+      lastFrame: 81
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []

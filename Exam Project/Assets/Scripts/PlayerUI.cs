@@ -28,7 +28,7 @@ public class PlayerUI : MonoBehaviour
     
     [Header("Objective List")]
     [SerializeField]
-    private bool isPaused;
+    public bool isPaused;
     public GameObject pauseMenu;
     public RectTransform compass;
 

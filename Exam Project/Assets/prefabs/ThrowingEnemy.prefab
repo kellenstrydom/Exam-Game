@@ -701,6 +701,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+  heathOrbDropChance: 50
+  healthOrbObj: {fileID: 3792560222740821350, guid: f64db5bb87763f0419227f8dbffae7b1, type: 3}
 --- !u!114 &-1395306266407594643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,6 +736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyAnimator: {fileID: 95958191548540600}
   _behaviour: {fileID: 4205772889877240254}
+  preActionState: 0
 --- !u!1 &1235278862634992
 GameObject:
   m_ObjectHideFlags: 0

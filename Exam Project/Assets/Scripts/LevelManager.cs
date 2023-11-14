@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     private PlayerInfo _playerInfo;
+
+    public int levelNumber;
     
     [Header("Objectives")]
     public int enemyObjective;
@@ -35,7 +37,9 @@ public class LevelManager : MonoBehaviour
     public List<Transform> npcs;
     public List<Transform> notes;
 
+    [Header("End point")]
     public Transform endPoint;
+    //public string nextSceneName;
 
     private void Start()
     {
@@ -82,6 +86,7 @@ public class LevelManager : MonoBehaviour
                               noteCount >= noteObjective &&
                               npcCount >= npcObjective);
 
+        if (objectivesComplete) endPoint.gameObject.SetActive(true);
         return objectivesComplete;
     }
     
@@ -97,6 +102,8 @@ public class LevelManager : MonoBehaviour
         if (objectivesComplete)
         {
             Debug.Log("level complete");
+            EskomHub.CompleteScene(levelNumber);
+            SceneManager.LoadScene("EskomHub");
         }
         else
         {
@@ -115,8 +122,6 @@ public class LevelManager : MonoBehaviour
         // test
         Debug.Log("Quit to main menu");
         RestartLevel();
-        
-        
-        //SceneManager.LoadScene("");
+        SceneManager.LoadScene("StartMenu");
     }
 }

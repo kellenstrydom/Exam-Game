@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemyData : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class EnemyData : MonoBehaviour
     [SerializeField]
     private float currentHealth;
 
+    public float heathOrbDropChance;
+    public GameObject healthOrbObj;
     private void Start()
     {
         currentHealth = maxHealth;
@@ -29,7 +32,9 @@ public class EnemyData : MonoBehaviour
     void Dead()
     {
         GameObject.FindGameObjectWithTag("Level Manager").GetComponent<LevelManager>().KillEnemy();
-        
+
+        if (Random.Range((int)0, (int)100) < heathOrbDropChance)
+            Instantiate(healthOrbObj, transform.position, Quaternion.identity);
         Destroy(gameObject,5f);
         gameObject.SetActive(false);
     }

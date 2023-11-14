@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3792560222740821346}
   - component: {fileID: 3792560222740821347}
   - component: {fileID: 3792560222740821348}
-  - component: {fileID: 3792560222740821349}
+  - component: {fileID: 2351823020240351286}
   m_Layer: 0
   m_Name: health orb
   m_TagString: Untagged
@@ -99,7 +99,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.3408661
   m_Center: {x: 0.08329773, y: 0, z: 0}
---- !u!114 &3792560222740821349
+--- !u!114 &2351823020240351286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,10 +108,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3792560222740821350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6db70d773d8bbbe4aa06f8f16d8e796c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bf2faf802dcf2d42afc03c1e0bc1b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healAmount: 10
+  healAmount: 1
   despawnTime: 30
 --- !u!1 &3792560223604524557
 GameObject:
