@@ -504,15 +504,15 @@ PrefabInstance:
       objectReference: {fileID: 1534772776}
     - target: {fileID: 4209894927975163438, guid: f6b6337d758e56f45b8941b8f79cc19b, type: 3}
       propertyPath: lampObjective
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4209894927975163438, guid: f6b6337d758e56f45b8941b8f79cc19b, type: 3}
       propertyPath: noteObjective
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4209894927975163438, guid: f6b6337d758e56f45b8941b8f79cc19b, type: 3}
       propertyPath: enemyObjective
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4209894927975163438, guid: f6b6337d758e56f45b8941b8f79cc19b, type: 3}
       propertyPath: notes.Array.size
