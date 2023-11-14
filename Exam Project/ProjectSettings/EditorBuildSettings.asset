@@ -6,11 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/sorting/StartMenu.unity
+    guid: 5cf11e02e8691e9419ca0c3564bd7751
+  - enabled: 1
+    path: Assets/Scenes/sorting/OpeningScene.unity
+    guid: 838418c9ee99bc34da5f659e6ecd9b4a
+  - enabled: 1
+    path: Assets/Scenes/Tee/drafts/Interview.unity
+    guid: 91e3174098b1b5c469faa27bbbe9cfb2
+  - enabled: 1
+    path: Assets/Scenes/Tee/Finals/Tutorial with player 1.unity
+    guid: 9ccc4d0acaba11142bb553d3a0308f2a
+  - enabled: 1
     path: Assets/Scenes/Tee/Finals/City 1.unity
     guid: 7cfb3d81c0684304c94a76dc5bab8a36
   - enabled: 1
     path: Assets/Scenes/Tee/Finals/city 2.unity
     guid: b2f91417cc0dad447abe0f3b1cdddaa9
+  - enabled: 1
+    path: Assets/Scenes/Diepsloot.unity
+    guid: c3cd7ed8d4809bf41b7e884d54d9b674
   - enabled: 1
     path: Assets/Scenes/Tee/Finals/City 3.unity
     guid: 6d441ff9b489fe24b85e3b71c95a328f
@@ -18,9 +33,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Tee/Finals/Final Round.unity
     guid: 505a59d14f651b84d9617e8ae40d19bc
   - enabled: 1
-    path: Assets/Scenes/Tee/Finals/Tutorial with player 1.unity
-    guid: 9ccc4d0acaba11142bb553d3a0308f2a
-  - enabled: 1
     path: Assets/Scenes/EskomHub.unity
     guid: 351e6a8527c1cb3438db8ccfb84aae5d
+  - enabled: 1
+    path: Assets/Scenes/sorting/LoadingScreen1.unity
+    guid: 556898642dcc03f4598b080ff8110f25
+  - enabled: 1
+    path: Assets/Scenes/sorting/LoadingScreen2.unity
+    guid: 06f1e77928b95654782d2579ebf86caa
+  - enabled: 1
+    path: Assets/Scenes/sorting/LoadingScreen3.unity
+    guid: 3654fce623fa70f4a97e211e6e51b323
+  - enabled: 1
+    path: Assets/Scenes/sorting/LoadingScreen4.unity
+    guid: 52fc825d6e8c56d4c86497470b59b2f4
+  - enabled: 1
+    path: Assets/Scenes/sorting/LoadingScreen5.unity
+    guid: f0adfd3adeb9cd646b5cb08939df41f3
   m_configObjects: {}
