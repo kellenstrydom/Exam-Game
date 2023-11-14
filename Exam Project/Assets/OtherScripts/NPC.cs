@@ -8,11 +8,13 @@ public class NPC : MonoBehaviour
 
     private bool isInRange = false;
     private Dialogue dialogue;
+    private bool spokeTo;
 
     private void Start()
     {
         dialogue = dialoguePanel.GetComponent<Dialogue>();
         dialoguePanel.SetActive(false); // Initially, set the dialoguePanel to inactive.
+        spokeTo = false;
     }
 
     private void Update()
@@ -21,6 +23,12 @@ public class NPC : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                if (!spokeTo)
+                {
+                    GameObject.FindWithTag("Level Manager").GetComponent<LevelManager>().SpeakWithNPC(transform);
+                    spokeTo = true;
+                }                
+                
                 interactText.SetActive(false);
                 dialoguePanel.SetActive(true); // Set the dialogue panel active when initiating a dialogue.
                 dialogue.StartDialogue(lines);
