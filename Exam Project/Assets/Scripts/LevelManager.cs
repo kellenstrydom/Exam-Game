@@ -75,7 +75,7 @@ public class LevelManager : MonoBehaviour
     public void SpeakWithNPC(Transform npc)
     {
         npcCount++;
-        generators.Remove(npc);
+        npcs.Remove(npc);
         CheckObjective();
     }
     
