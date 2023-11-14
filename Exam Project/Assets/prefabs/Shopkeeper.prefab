@@ -31,7 +31,8 @@ Transform:
   m_LocalPosition: {x: -169.92, y: -134.6968, z: 77.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7300071342205616772}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -50,7 +51,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508572320361162950}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -123,3 +124,69 @@ MonoBehaviour:
   - 'Jeff: May I ask that you inform me as soon as he comes back.'
   - 'SHOPKEEPER: I will contact you as soon as I get in touch with her. '
   interactText: {fileID: 0}
+--- !u!1001 &2320942584458209694
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1508572320361162945}
+    m_Modifications:
+    - target: {fileID: -6057140222963153312, guid: 027f00c86c565a44f865fc7c749b99e5, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: eae80995d3e479740bc19c8e59d7641e, type: 2}
+    - target: {fileID: -4216859302048453862, guid: 027f00c86c565a44f865fc7c749b99e5, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 027f00c86c565a44f865fc7c749b99e5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 027f00c86c565a44f865fc7c749b99e5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 027f00c86c565a44f865fc7c749b99e5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 027f00c86c565a44f865fc7c749b99e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 027f00c86c565a44f865fc7c749b99e5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 027f00c86c565a44f865fc7c749b99e5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 027f00c86c565a44f865fc7c749b99e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 027f00c86c565a44f865fc7c749b99e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 027f00c86c565a44f865fc7c749b99e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 027f00c86c565a44f865fc7c749b99e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 027f00c86c565a44f865fc7c749b99e5, type: 3}
+      propertyPath: m_Name
+      value: The Adventurer Blake
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 027f00c86c565a44f865fc7c749b99e5, type: 3}
+--- !u!4 &7300071342205616772 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 027f00c86c565a44f865fc7c749b99e5, type: 3}
+  m_PrefabInstance: {fileID: 2320942584458209694}
+  m_PrefabAsset: {fileID: 0}
