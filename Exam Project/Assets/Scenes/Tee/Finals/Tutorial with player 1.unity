@@ -516,12 +516,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4209894927975163438, guid: f6b6337d758e56f45b8941b8f79cc19b, type: 3}
       propertyPath: notes.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4209894927975163438, guid: f6b6337d758e56f45b8941b8f79cc19b, type: 3}
       propertyPath: notes.Array.data[0]
       value: 
-      objectReference: {fileID: 2124273451}
+      objectReference: {fileID: 2097576401}
     - target: {fileID: 4209894927975163438, guid: f6b6337d758e56f45b8941b8f79cc19b, type: 3}
       propertyPath: notes.Array.data[1]
       value: 
@@ -6667,6 +6667,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1539896782852124935, guid: 6f197770a7c1ee040b960db8459ccd0e, type: 3}
+      propertyPath: sceneToLoad
+      value: EskomHub
+      objectReference: {fileID: 0}
     - target: {fileID: 6961633869039075757, guid: 6f197770a7c1ee040b960db8459ccd0e, type: 3}
       propertyPath: m_Size.z
       value: 5.684398
@@ -10714,11 +10718,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b10393abe8a7a8b42b4a20f9dc08309c, type: 3}
---- !u!4 &2124273451 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6290472556114439770, guid: b10393abe8a7a8b42b4a20f9dc08309c, type: 3}
-  m_PrefabInstance: {fileID: 2124273450}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8678163476870878353
 PrefabInstance:
   m_ObjectHideFlags: 0
